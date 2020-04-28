@@ -12,10 +12,11 @@ hygen component --name creative-name new
 * Setup Hygen generator
 * Setup layouts structure
 * Setup component structure
+* Setup basic router
 
 ## Infrastructure Roadmap
+* Setup dynamic router
 * Setup assets structure
-* Setup basic router
 * Integrate state manager
 * Integrate mock api services
 * Setup signup/login routes

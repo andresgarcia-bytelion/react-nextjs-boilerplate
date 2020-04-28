@@ -1,22 +1,29 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import Header from './layouts/header'
 import Footer from './layouts/footer'
+import Home from './pages/home'
+import Components from './pages/components'
 
 const App = () => {
   return (
-    <React.Fragment>
+    <Router>
       <Header />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/components" component={Components} />
+        </Switch>
       <Footer />
-    </React.Fragment>
+    </Router>
   )
 }
 
-const rootElement = document.getElementById("root")
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  rootElement
+  <App />,
+  document.getElementById("root")
 )
