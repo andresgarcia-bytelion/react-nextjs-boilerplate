@@ -9,11 +9,10 @@ import Header from './layouts/header'
 import Footer from './layouts/footer'
 import Home from './pages/home'
 import Components from './pages/components'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
-import allReducer from './reducers'
+import { createStore, StoreProvider } from 'easy-peasy';
+import storeModel from './models'
 
-const store = createStore(allReducer)
+const store = createStore(storeModel)
 
 const App = () => {
   return (
@@ -29,8 +28,8 @@ const App = () => {
 }
 
 ReactDOM.render(
-  <Provider store={store}>
+  <StoreProvider store={store}>
     <App />
-  </Provider>,
+  </StoreProvider>,
   document.getElementById("root")
 )
