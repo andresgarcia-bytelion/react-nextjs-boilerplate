@@ -9,15 +9,16 @@ hygen component --name creative-name new
 ## Completed Roadmap
 * Integrate Parcel
 * Integrate Sass
+* Integrate Redux
 * Setup Hygen generator
 * Setup layouts structure
 * Setup component structure
 * Setup basic router
 
 ## Infrastructure Roadmap
+* Add Hygen generator for redux
 * Setup dynamic router
 * Setup assets structure
-* Integrate state manager
 * Integrate mock api services
 * Setup signup/login routes
 
