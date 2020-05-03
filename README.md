@@ -10,6 +10,7 @@ hygen component --name creative-name new
 * Integrate Parcel
 * Integrate Sass
 * Integrate Easy Peasy
+* Setup icon system
 * Setup Hygen generator
 * Setup layouts structure
 * Setup component structure
@@ -18,9 +19,12 @@ hygen component --name creative-name new
 ## Infrastructure Roadmap
 * Add Hygen generator for easy peasy
 * Setup dynamic router
-* Setup assets structure
+* Setup image system
 * Integrate mock api services
 * Setup signup/login routes
+
+## Completed Components Roadmap
+* Select element
 
 ## Components Roadmap
 * Data table
