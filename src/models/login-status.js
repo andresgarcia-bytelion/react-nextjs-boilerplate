@@ -1,5 +1,5 @@
 const loginStatusModel = {
-  loggedIn: false
+	loggedIn: false
 };
 
 export default loginStatusModel

@@ -2,7 +2,7 @@ import React from 'react'
 import './footer.scss'
 
 function Footer() {
-	return(
+	return (
 		<footer className="footer">Footer</footer>
 	)
 }

@@ -8,7 +8,7 @@ function Header() {
 
 	console.log(loggedIn);
 
-	return(
+	return (
 		<header className="header">
 			<h1>Header</h1>
 			<SiteNav />

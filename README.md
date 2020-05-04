@@ -18,6 +18,7 @@ hygen component --name creative-name new
 
 ## Infrastructure Roadmap
 * Add Hygen generator for easy peasy
+* Setup global styles
 * Setup dynamic router
 * Setup image system
 * Integrate mock api services
