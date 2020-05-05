@@ -5,17 +5,17 @@ import {
 	Switch,
 	Route
 } from 'react-router-dom'
+import { createStore, StoreProvider } from 'easy-peasy';
+import storeModel from './models'
 import 'normalize.css'
 import Header from './layouts/header'
 import Footer from './layouts/footer'
 import Home from './pages/home'
 import Components from './pages/components'
-import { createStore, StoreProvider } from 'easy-peasy';
-import storeModel from './models'
 
 const store = createStore(storeModel)
 
-const App = () => {
+function App() {
 	return (
 		<Router>
 			<Header />

@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "react-router-dom";
-import "./site-nav.scss"
+import React from 'react'
+import { Link } from 'react-router-dom';
+import './site-nav.scss'
 
 function SiteNav() {
 	return (

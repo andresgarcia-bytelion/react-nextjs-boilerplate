@@ -15,17 +15,19 @@ hygen component --name creative-name new
 * Setup layouts structure
 * Setup component structure
 * Setup basic router
+* Setup global styles
+* Setup form structure with validation
+* Integrate mock api service
 
 ## Infrastructure Roadmap
 * Add Hygen generator for easy peasy
-* Setup global styles
 * Setup dynamic router
 * Setup image system
-* Integrate mock api services
 * Setup signup/login routes
 
 ## Completed Components Roadmap
 * Select element
+* Input element
 
 ## Components Roadmap
 * Data table

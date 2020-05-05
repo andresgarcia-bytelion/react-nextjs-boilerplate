@@ -9,6 +9,6 @@ function Input(props, ref) {
 	)
 }
 
-const forwardedInput = React.forwardRef(Input);
+const forwardedInput = React.forwardRef(Input)
 
 export default forwardedInput

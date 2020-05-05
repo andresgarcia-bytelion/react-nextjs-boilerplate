@@ -1,7 +1,7 @@
 import React from 'react'
+import { useForm } from 'react-hook-form'
 import Select from '../components/select'
 import Input from '../components/input'
-import { useForm } from 'react-hook-form'
 
 function Components() {
 	const methods = useForm();
@@ -16,7 +16,7 @@ function Components() {
 					className="select"
 					name="select_1"
 					label="Select Label"
-					options={[
+					items={[
 						{
 							value: "option 1",
 							label: "Option 1"
