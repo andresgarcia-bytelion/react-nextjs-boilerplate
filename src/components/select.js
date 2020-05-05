@@ -7,8 +7,8 @@ function Select(props, ref) {
 
 	return (
 		<div className={props.className + '_field'}>
-			<label className={props.className + '_label'} id={props.id}>{props.label}</label>
-			<select className={props.className} id={props.id} name={props.name} ref={ref}>
+			<label className={props.className + '_label'} htmlFor={props.name}>{props.label}</label>
+			<select className={props.className} id={props.name} name={props.name} ref={ref}>
 				{options}
 			</select>
 		</div>

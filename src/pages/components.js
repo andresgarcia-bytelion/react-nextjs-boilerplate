@@ -1,10 +1,11 @@
 import React from 'react'
 import Select from '../components/select'
+import Input from '../components/input'
 import { useForm } from 'react-hook-form'
 
 function Components() {
 	const methods = useForm();
-	const { handleSubmit, register } = methods;
+	const { handleSubmit, errors, register } = methods;
 	const onSubmit = data => console.log(data);
 
 	return (
@@ -13,9 +14,8 @@ function Components() {
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Select
 					className="select"
-					name="select"
+					name="select_1"
 					label="Select Label"
-					id="select_1"
 					options={[
 						{
 							value: "option 1",
@@ -28,6 +28,18 @@ function Components() {
 					]}
 					ref={register}
 				/>
+				<Input
+					className="input"
+					name="input_1"
+					label="Input Label"
+					type="search"
+					placeholder="text"
+					ref={register({
+						required: true,
+						pattern: /^[A-Za-z]+$/i
+					})}
+				/>
+				{errors.input_1 && 'First name required'}
 				<button type="submit">Submit</button>
 			</form>
 		</React.Fragment>
