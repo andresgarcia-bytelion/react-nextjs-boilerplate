@@ -2,6 +2,8 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import Select from '../components/select'
 import Input from '../components/input'
+import images from '../assets/images/*.jpg'
+import Check from '../assets/icons/check.svg'
 
 function Components() {
 	const methods = useForm();
@@ -42,6 +44,9 @@ function Components() {
 				{errors.input_1 && 'First name required'}
 				<button type="submit">Submit</button>
 			</form>
+			<img src={images['doberfrog']} alt="" />
+			<img src={images['ducroc']} alt="" />
+			<Check />
 		</React.Fragment>
 	)
 }

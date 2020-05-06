@@ -12,6 +12,9 @@ function SiteNav() {
 				<li className="site_nav_item">
 					<Link className="site_nav_link" to="/components">Components</Link>
 				</li>
+				<li className="site_nav_item">
+					<Link className="site_nav_link" to="/requests">Requests</Link>
+				</li>
 			</ul>
 		</nav>
 	)

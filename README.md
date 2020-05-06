@@ -3,6 +3,11 @@
 ```
 npm install
 npm start
+```
+
+## Hygen Examples
+
+```
 hygen component --name creative-name new
 ```
 
@@ -17,13 +22,14 @@ hygen component --name creative-name new
 * Setup basic router
 * Setup global styles
 * Setup form structure with validation
+* Setup image system
 * Integrate mock api service
 
 ## Infrastructure Roadmap
 * Add Hygen generator for easy peasy
 * Setup dynamic router
-* Setup image system
 * Setup signup/login routes
+* Make it pretty
 
 ## Completed Components Roadmap
 * Select element
