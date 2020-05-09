@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { createStore, StoreProvider } from 'easy-peasy';
 import storeModel from '/models'
-import 'normalize.css'
+import './styles/normalize.scss'
 import Header from './layouts/header'
 import Footer from './layouts/footer'
 import Home from './pages/home'
