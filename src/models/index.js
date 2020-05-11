@@ -1,7 +1,9 @@
-import loginStatusModel from './login-status';
+import loginModel from './login';
+import mobileNavModel from './mobile-nav';
 
 const storeModel = {
-	loginStatus: loginStatusModel
+	login: loginModel,
+	mobileNav: mobileNavModel
 }
 
 export default storeModel

@@ -1,16 +1,14 @@
 import React from 'react'
-import { useStoreState } from 'easy-peasy';
+import MobileNavButton from '../components/mobile-nav-button'
 import SiteNav from '../navigation/site-nav'
 import './header.scss'
 
 function Header() {
-	const loggedIn = useStoreState(state => state.loginStatus.loggedIn);
-	console.log(loggedIn);
-
 	return (
 		<header className="header">
 			<div className="header_inner">
 				<h1>Header</h1>
+				<MobileNavButton />
 				<SiteNav />
 			</div>
 		</header>
