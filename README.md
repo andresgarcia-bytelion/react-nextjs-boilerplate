@@ -9,6 +9,7 @@ npm start
 
 ```
 hygen component --name creative-name new
+hygen page --name about new
 ```
 
 ## Completed Roadmap
