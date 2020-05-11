@@ -16,11 +16,13 @@ function App() {
 	return (
 		<Router>
 			<Header />
-			<Switch>
-				<Route path="/" exact component={Home} />
-				<Route path="/components" component={Components} />
-				<Route path="/requests" component={Requests} />
-			</Switch>
+			<main className="main">
+				<Switch>
+					<Route path="/" exact component={Home} />
+					<Route path="/components" component={Components} />
+					<Route path="/requests" component={Requests} />
+				</Switch>
+			</main>
 			<Footer />
 		</Router>
 	)
