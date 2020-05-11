@@ -1,7 +1,19 @@
+@import '../styles';
+
 .site_nav {}
 
-.site_nav_list {}
+.site_nav_title {}
+
+.site_nav_list {
+	@include reset_list;
+}
 
 .site_nav_item {}
 
-.site_nav_link {}
+.site_nav_link {
+	display: block;
+}
+
+.site_nav_link_icon {}
+
+.site_nav_link_label {}

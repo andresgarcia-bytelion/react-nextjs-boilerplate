@@ -1,6 +1,6 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
 import { useStoreState } from 'easy-peasy';
+import Nav from './nav'
 import './site-nav.scss'
 
 function SiteNav() {
@@ -8,28 +8,28 @@ function SiteNav() {
 
 	return (
 		<div className={'site_nav_wrapper' + (mobileNavOpen ? ' site_nav_wrapper_open' : '')}>
-			<nav className="site_nav">
-				<ul className="site_nav_list">
-					<li className="site_nav_item">
-						<NavLink
-							className="site_nav_link"
-							activeClassName="site_nav_link_active"
-							to="/">Home</NavLink>
-					</li>
-					<li className="site_nav_item">
-						<NavLink
-							className="site_nav_link"
-							activeClassName="site_nav_link_active"
-							to="/components">Components</NavLink>
-					</li>
-					<li className="site_nav_item">
-						<NavLink
-							className="site_nav_link"
-							activeClassName="site_nav_link_active"
-							to="/requests">Requests</NavLink>
-					</li>
-				</ul>
-			</nav>
+			<Nav
+				title="Menu"
+				class="site_nav"
+				items={[
+					{
+						to: '/',
+						exact: true,
+						icon: '',
+						label: 'Home'
+					},
+					{
+						to: '/components',
+						icon: '',
+						label: 'Components'
+					},
+					{
+						to: '/requests',
+						icon: '',
+						label: 'Requests'
+					}
+				]}
+			/>
 		</div>
 	)
 }
