@@ -1,0 +1,21 @@
+@import '../../styles';
+
+.nav {}
+
+.nav_title {
+  @include visually_hide;
+}
+
+.nav_list {
+  @include reset_list;
+}
+
+.nav_item {}
+
+.nav_link {
+  text-decoration: none;
+
+  &_active {
+    background: rgba(#000, .15);
+  }
+}
