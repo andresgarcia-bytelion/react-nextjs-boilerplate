@@ -1,8 +1,8 @@
-# Bytelion React Boielrplate
+# Bytelion React Boilerplate
 
 ```
 npm install
-npm start
+npm run dev
 ```
 
 ## Hygen Examples
