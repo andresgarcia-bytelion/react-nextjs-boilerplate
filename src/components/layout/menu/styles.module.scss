@@ -1,0 +1,17 @@
+@import '../../../styles';
+
+.page_menu_wrapper {}
+
+.page_menu {
+
+  @media #{$max_lg} {
+    display: none;
+  }
+
+  &_open {
+
+    @media #{$max_lg} {
+      display: block;
+    }
+  }
+}

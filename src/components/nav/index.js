@@ -13,7 +13,7 @@ const Nav = ({
     const currentLink = router.pathname === item.href;
 
     return (
-      <li className={styles.nav_item}>
+      <li className={styles.nav_item} key={item.href}>
         <Link href={item.href}>
           <a className={`${styles.nav_link} ${currentLink ? styles.nav_link_active : ''}`} href={item.href}>{item.label}</a>
         </Link>
