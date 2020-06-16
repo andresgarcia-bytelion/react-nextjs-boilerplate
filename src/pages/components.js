@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import useApi from '../lib/use-api';
 import Layout from '../components/layout';
 
 const Components = () => {
-  const { response, error, isLoading } = useApi('/api/test');
+  const { response, isLoading } = useApi('/api/test');
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    if (response) {
+      setItems(response);
+    }
+  }, [response]);
 
   return (
     <Layout title="Components">
       <h2>Components Playground</h2>
-      {JSON.stringify(response)}
-      {JSON.stringify(error)}
-      {isLoading}
+      <p>
+        {!isLoading && response && JSON.stringify(items)}
+      </p>
     </Layout>
   );
 };
