@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useApi from '../lib/use-api';
 import Layout from '../components/layout';
+import Button from '../components/button';
 
 const Components = () => {
   const { response, isLoading } = useApi('/api/test');
@@ -18,6 +19,7 @@ const Components = () => {
       <p>
         {!isLoading && response && JSON.stringify(items)}
       </p>
+      <Button label="Boop Me" />
     </Layout>
   );
 };
