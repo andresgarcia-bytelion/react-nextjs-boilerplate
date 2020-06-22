@@ -5,4 +5,8 @@
   @media #{$min_lg} {
     display: none;
   }
+
+  &_default {}
+
+  &_alt {}
 }

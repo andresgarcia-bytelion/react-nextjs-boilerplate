@@ -35,6 +35,7 @@ const Menu = () => {
           menuOpen={menuOpen}
           setMenuOpen={setMenuOpen}
           label="Close Menu"
+          theme="alt"
         />
       </div>
     </div>

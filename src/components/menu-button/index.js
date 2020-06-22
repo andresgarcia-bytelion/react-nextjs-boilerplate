@@ -6,9 +6,10 @@ const MenuButton = ({
   menuOpen,
   setMenuOpen,
   label,
+  theme,
 }) => (
   <button
-    className={styles.menu_button}
+    className={`${styles.menu_button} ${styles[`menu_button_${theme}`]}`}
     type="button"
     onClick={() => setMenuOpen(!menuOpen)}
   >
@@ -20,6 +21,11 @@ MenuButton.propTypes = {
   menuOpen: PropTypes.bool.isRequired,
   setMenuOpen: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
+  theme: PropTypes.string,
+};
+
+MenuButton.defaultProps = {
+  theme: 'default',
 };
 
 export default MenuButton;
