@@ -1,5 +1,28 @@
 @import '../../styles';
 
-.modal {}
+.modal {
+  height: 100%;
+  width: 100%;
 
-.modal_inner {}
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity $speed,
+    visibility $speed;
+
+  &_visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal_inner {
+  max-width: 500px;
+}

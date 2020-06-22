@@ -17,7 +17,7 @@ const Components = () => {
     <Layout title="Components">
       <h2>Components Playground</h2>
       <p>
-        {!isLoading && response && JSON.stringify(items)}
+        {response && !isLoading && JSON.stringify(items)}
       </p>
       <Button label="Boop Me" />
     </Layout>

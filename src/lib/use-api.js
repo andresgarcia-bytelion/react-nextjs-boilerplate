@@ -1,5 +1,5 @@
-import fetch from 'isomorphic-unfetch';
 import { useEffect, useState } from 'react';
+import fetch from 'isomorphic-unfetch';
 
 function initialState(args) {
   return {
