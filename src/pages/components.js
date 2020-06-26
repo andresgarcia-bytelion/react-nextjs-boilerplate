@@ -1,24 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import useApi from '../lib/use-api';
+import { useAppContext } from '../contexts';
 import Layout from '../components/layout';
 import Button from '../components/button';
 
 const Components = () => {
-  const { response, isLoading } = useApi('/api/test');
-  const [items, setItems] = useState([]);
+  const { response, isLoading } = useApi(`${process.env.apiRoot}questions`);
+  const { title } = useAppContext();
 
-  useEffect(() => {
-    if (response) {
-      setItems(response);
-    }
-  }, [response]);
+  const items = response && !isLoading
+    ? response.map((item) => (JSON.stringify(item))) : '';
 
   return (
     <Layout title="Components">
       <h2>Components Playground</h2>
-      <p>
-        {response && !isLoading && JSON.stringify(items)}
-      </p>
+      <p>{response && !isLoading && JSON.stringify(response)}</p>
+      <p>{items}</p>
+      <p>{title}</p>
       <Button label="Boop Me" />
     </Layout>
   );

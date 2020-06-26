@@ -23,6 +23,22 @@
   }
 }
 
-.modal_inner {
+.modal_header {}
+
+.modal_title {}
+
+.modal_close {
+  border: 0;
+}
+
+.modal_close_icon {
+  display: block;
+}
+
+.modal_close_label {
+  @include visually_hide;
+}
+
+.modal_body {
   max-width: 500px;
 }

@@ -6,6 +6,8 @@ const withSvgr = require('next-svgr');
 module.exports = withPlugins([[withSvgr]], {
   serverRuntimeConfig: {},
   publicRuntimeConfig: {},
-  env: {},
+  env: {
+    apiRoot: 'https://private-143a4-reactboilerplate2.apiary-mock.com/',
+  },
   poweredByHeader: false,
 });

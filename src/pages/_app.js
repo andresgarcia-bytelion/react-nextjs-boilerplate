@@ -2,6 +2,7 @@
 
 import React from 'react';
 import App from 'next/app';
+import AppContextProvider from '../contexts';
 
 import '../styles/normalize.scss';
 import '../styles/global.scss';
@@ -11,7 +12,9 @@ class ReturnApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <Component {...pageProps} />
+      <AppContextProvider>
+        <Component {...pageProps} />
+      </AppContextProvider>
     );
   }
 }
