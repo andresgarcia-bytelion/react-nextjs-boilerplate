@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const MenuButton = ({
-  menuOpen,
-  setMenuOpen,
   label,
   theme,
+  menuOpen,
+  setMenuOpen,
 }) => (
   <button
     className={`${styles.menu_button} ${styles[`menu_button_${theme}`]}`}
@@ -18,10 +18,10 @@ const MenuButton = ({
 );
 
 MenuButton.propTypes = {
-  menuOpen: PropTypes.bool.isRequired,
-  setMenuOpen: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
   theme: PropTypes.string,
+  menuOpen: PropTypes.bool.isRequired,
+  setMenuOpen: PropTypes.func.isRequired,
 };
 
 MenuButton.defaultProps = {

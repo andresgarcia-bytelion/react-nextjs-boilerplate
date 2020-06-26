@@ -13,9 +13,9 @@ const Menu = () => {
   return (
     <div className={styles.page_menu_wrapper} ref={node}>
       <MenuButton
+        label="Menu"
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
-        label="Menu"
       />
       <div className={`${styles.page_menu} ${menuOpen ? styles.page_menu_open : ''}`}>
         <Nav
