@@ -10,7 +10,7 @@ npm run dev
 
 ## Hygen Scaffolding
 
-Hygen provides a quick and easy way to scaffold components into your webapp without the manual digging. The following Hygen cli commands are currently available:
+[Hygen](https://www.hygen.io/templates/) provides a quick and easy way to scaffold components into your webapp without the manual digging. The following Hygen cli commands are currently available:
 
 ```
 hygen component --name creative-name new
