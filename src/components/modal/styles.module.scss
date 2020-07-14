@@ -17,28 +17,28 @@
     opacity $speed,
     visibility $speed;
 
-  &_visible {
+  &Visible {
     opacity: 1;
     visibility: visible;
   }
 }
 
-.modal_header {}
+.modalHeader {}
 
-.modal_title {}
+.modalTitle {}
 
-.modal_close {
+.modalClose {
   border: 0;
 }
 
-.modal_close_icon {
+.modalCloseIcon {
   display: block;
 }
 
-.modal_close_label {
+.modalCloseLabel {
   @include visually_hide;
 }
 
-.modal_body {
+.modalBody {
   max-width: 500px;
 }

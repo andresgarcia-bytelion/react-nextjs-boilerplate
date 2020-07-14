@@ -1,0 +1,46 @@
+@import '../../styles';
+
+.form {}
+
+.formInner {}
+
+.formHeader {}
+
+.formTitle {
+	margin: 0 0 20px;
+}
+
+.formBody {}
+
+.formPage {
+	display: none;
+
+	&Current {
+		display: block;
+	}
+}
+
+.formFields {
+	margin: 0 -10px 40px;
+}
+
+.formRow {
+
+	@media #{$min_md} {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.formContent {}
+
+.formFooter {
+
+	@media #{$min_xs} {
+		align-items: flex-end;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.formFooterGroup {}

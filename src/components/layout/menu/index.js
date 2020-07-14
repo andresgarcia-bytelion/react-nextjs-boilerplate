@@ -1,8 +1,11 @@
 import React, { useState, useRef } from 'react';
+import classNames from 'classnames/bind';
 import OnClickOutside from '../../../hooks/on-click-outside';
 import MenuButton from '../../menu-button';
 import Nav from '../../nav';
 import styles from './styles.module.scss';
+
+const cx = classNames.bind(styles);
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,14 +13,19 @@ const Menu = () => {
 
   OnClickOutside(node, () => setMenuOpen(false));
 
+  const pageMenu = cx({
+    pageMenu: true,
+    pageMenuOpen: menuOpen
+  })
+
   return (
-    <div className={styles.page_menu_wrapper} ref={node}>
+    <div className={styles.pageMenuWrapper} ref={node}>
       <MenuButton
         label="Menu"
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
       />
-      <div className={`${styles.page_menu} ${menuOpen ? styles.page_menu_open : ''}`}>
+      <div className={pageMenu}>
         <Nav
           title="Main Menu"
           items={[

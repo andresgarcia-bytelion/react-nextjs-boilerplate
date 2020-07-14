@@ -1,0 +1,26 @@
+@import '../../../styles';
+
+.formInputWrapper {
+	position: relative;
+}
+
+.formInput {
+	width: 100%;
+
+	appearance: none;
+	border: 1px solid #e3e6ee;
+	line-height: normal;
+	padding: 14px 20px;
+
+	&::placeholder {}
+
+	&::-webkit-inner-spin-button,
+	&::-webkit-calendar-picker-indicator {
+		display: none;
+		-webkit-appearance: none;
+	}
+
+	&:disabled {
+		background: #f1f3f8;
+	}
+}

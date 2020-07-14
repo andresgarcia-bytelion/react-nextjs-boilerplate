@@ -1,12 +1,8 @@
 @import '../../styles';
 
-.menu_button {
+.menuButton {
 
   @media #{$min_lg} {
     display: none;
   }
-
-  &_default {}
-
-  &_alt {}
 }

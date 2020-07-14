@@ -2,20 +2,20 @@
 
 .nav {}
 
-.nav_title {
+.navTitle {
   @include visually_hide;
 }
 
-.nav_list {
+.navList {
   @include reset_list;
 }
 
-.nav_item {}
+.navItem {}
 
-.nav_link {
+.navLink {
   text-decoration: none;
 
-  &_active {
+  &Active {
     background: rgba(#000, .15);
   }
 }

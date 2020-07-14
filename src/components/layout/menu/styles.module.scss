@@ -1,8 +1,8 @@
 @import '../../../styles';
 
-.page_menu_wrapper {}
+.pageMenuWrapper {}
 
-.page_menu {
+.pageMenu {
 
   @media #{$max_lg} {
     position: fixed;
@@ -16,7 +16,7 @@
       visibility $speed;
   }
 
-  &_open {
+  &Open {
 
     @media #{$max_lg} {
       opacity: 1;

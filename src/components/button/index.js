@@ -7,10 +7,10 @@ const Button = ({
   label,
   icon,
   theme,
-  event,
+  onClick,
 }) => {
   let iconElement = '';
-  const iconClass = styles.button_icon;
+  const iconClass = styles.buttonIcon;
 
   switch (icon) {
     case 'check':
@@ -22,11 +22,11 @@ const Button = ({
 
   return (
     <button
-      className={`${styles.button} ${styles[`button_${theme}`]}`}
+      className={`${styles.button} ${styles[`button${theme}`]}`}
       type="button"
-      onClick={event}
+      onClick={onClick}
     >
-      <span className={styles.button_label}>{label}</span>
+      <span className={styles.buttonLabel}>{label}</span>
       {iconElement}
     </button>
   );
@@ -36,13 +36,13 @@ Button.propTypes = {
   label: PropTypes.string.isRequired,
   icon: PropTypes.string,
   theme: PropTypes.string,
-  event: PropTypes.func,
+  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   icon: '',
   theme: 'default',
-  event: () => {},
+  onClick: () => {},
 };
 
 export default Button;

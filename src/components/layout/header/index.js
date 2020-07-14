@@ -3,8 +3,8 @@ import Menu from '../menu';
 import styles from './styles.module.scss';
 
 const Header = () => (
-  <header className={styles.page_header}>
-    <div className={styles.page_header_inner}>
+  <header className={styles.pageHeader}>
+    <div className={styles.pageHeaderInner}>
       <h1>Header</h1>
       <Menu />
     </div>

@@ -9,22 +9,21 @@ const Nav = ({
   items,
 }) => {
   const router = useRouter();
-  const pieces = items.map((item) => {
-    const currentLink = router.pathname === item.href;
-
-    return (
-      <li className={styles.nav_item} key={item.href}>
-        <Link href={item.href}>
-          <a className={`${styles.nav_link} ${currentLink ? styles.nav_link_active : ''}`} href={item.href}>{item.label}</a>
-        </Link>
-      </li>
-    );
-  });
 
   return (
     <nav className={styles.nav} aria-label={title}>
-      <h2 className={styles.nav_title}>{title}</h2>
-      <ul className={styles.nav_list}>{pieces}</ul>
+      <h2 className={styles.navTitle}>{title}</h2>
+      <ul className={styles.navList}>{items.map((item) => {
+        const currentLink = router.pathname === item.href;
+
+        return (
+          <li className={styles.navItem} key={item.href}>
+            <Link href={item.href}>
+              <a className={`${styles.navLink} ${currentLink ? styles.navLinkActive : ''}`} href={item.href}>{item.label}</a>
+            </Link>
+          </li>
+        );
+      })}</ul>
     </nav>
   );
 };

@@ -20,7 +20,7 @@ const Layout = ({ title, children }) => (
       />
     </Head>
     <Header />
-    <main className={styles.page_main}>{children}</main>
+    <main className={styles.pageMain}>{children}</main>
     <Footer />
   </div>
 );
