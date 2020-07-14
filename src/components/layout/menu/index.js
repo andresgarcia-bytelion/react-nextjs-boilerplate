@@ -37,6 +37,10 @@ const Menu = () => {
               href: '/components',
               label: 'Components',
             },
+            {
+              href: '/algolia',
+              label: 'Algolia',
+            },
           ]}
         />
         <MenuButton

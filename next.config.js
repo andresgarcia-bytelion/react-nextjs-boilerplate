@@ -8,6 +8,9 @@ module.exports = withPlugins([[withSvgr]], {
   publicRuntimeConfig: {},
   env: {
     apiRoot: 'https://private-143a4-reactboilerplate2.apiary-mock.com/',
+    algoliaId: '',
+    algoliaKey: '',
+    algoliaIndex: '',
   },
   poweredByHeader: false,
 });

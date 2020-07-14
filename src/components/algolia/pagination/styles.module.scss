@@ -1,0 +1,54 @@
+@import '../../../styles';
+
+.pagination {
+	align-items: center;
+  display: flex;
+  padding: 20px 0;
+}
+
+.paginationInfo {
+	margin-right: 12px;
+}
+
+.paginationHint {}
+
+.paginationLabel {
+	font-weight: 700;
+}
+
+.paginationArrows {}
+
+.paginationArrow {
+	height: 36px;
+	width: 36px;
+
+	appearance: none;
+	background: none;
+	border: 1px solid #000;
+	border-radius: 2px;
+	color: #333;
+	cursor: pointer;
+	transition:
+		background $speed,
+		border $speed,
+		color $speed;
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: .35;
+	}
+
+	&:hover:not(:disabled),
+	&:focus:not(:disabled) {
+		border-color: $accent;
+		color: $accent;
+	}
+}
+
+.paginationArrowIcon {
+	color: inherit;
+}
+
+.paginationArrowLabel {
+	@include visually_hide;
+}

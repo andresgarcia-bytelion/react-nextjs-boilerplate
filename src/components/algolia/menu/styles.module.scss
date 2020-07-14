@@ -1,0 +1,166 @@
+@import '../../../styles';
+
+.filter {
+	width: 100%;
+
+	position: relative;
+
+	margin-bottom: 10px;
+
+	@media #{$min_xs} {
+		width: calc(50% - 20px);
+
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	@media #{$min_sm} {
+		width: calc(33.33% - 20px);
+	}
+
+	@media #{$min_xl} {
+		width: auto;
+
+		margin-left: 0;
+	}
+
+	@media #{$min_xxl} {
+		margin-bottom: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.filterButton {
+	width: 100%;
+
+	align-items: center;
+	appearance: none;
+	background: #fff;
+	border: 1px solid #000;
+	border-radius: 3px;
+  color: #000;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 15px;
+  text-align: left;
+  transition: border-color $speed;
+
+	&[disabled] {
+		cursor: not-allowed;
+		opacity: .35;
+		pointer-events: none;
+	}
+
+	&:hover,
+	&:focus {
+    border-color: $accent;
+  }
+}
+
+.filterButtonLabel {
+	max-width: 120px;
+	width: 100%;
+
+	margin-right: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	@media #{$min_xxl} {
+		max-width: 320px;
+	}
+}
+
+.filterButtonIcon {
+	width: 8px;
+
+	position: relative;
+}
+
+.filterDropdown {
+	@include reset_list;
+
+	min-width: 255px;
+	width: 100%;
+
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 20;
+
+	background: #fff;
+	border: 1px solid #000;
+	border-radius: 3px;
+	margin-top: -1px;
+	opacity: 0;
+	visibility: hidden;
+	padding: 5px 0;
+	transform: translate(0, -2px);
+	transition:
+		opacity $speed,
+		visibility $speed,
+		transform $speed;
+
+	&Visible {
+		opacity: 1;
+		visibility: visible;
+		transform: translate(0, 0);
+	}
+}
+
+.filterDropdownItem {}
+
+.filterDropdownLink {
+	@include space_out;
+
+	width: 100%;
+
+	align-items: center;
+	appearance: none;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	display: flex;
+	padding: 6px 15px;
+	text-align: left;
+	text-decoration: none;
+  transition:
+    background $speed,
+    color $speed;
+
+	&:hover,
+	&:focus {
+    background: $mist;
+    color: $accent;
+	}
+
+	&Active {
+		color: $accent;
+	}
+}
+
+.filterDropdownLabel {}
+
+.filterDropdownIcon {
+	position: relative;
+	top: -1px;
+
+	margin-left: 10px;
+	opacity: 0;
+  visibility: hidden;
+  transform: scale(.65);
+  transform-origin: right center;
+	transition:
+		color $speed,
+		opacity $speed,
+		visibility $speed;
+
+	&Active {
+		opacity: 1;
+		visibility: visible;
+	}
+}

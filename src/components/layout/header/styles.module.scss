@@ -1,5 +1,10 @@
 @import '../../../styles';
 
-.pageHeader {}
+.pageHeader {
+  background: #eee;
+  padding: 20px 0;
+}
 
-.pageHeaderInner {}
+.pageHeaderInner {
+  @include row;
+}

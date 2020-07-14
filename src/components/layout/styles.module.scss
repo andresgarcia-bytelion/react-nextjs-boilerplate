@@ -1,5 +1,11 @@
 @import '../../styles';
 
-.page {}
+.page {
+  background: #fff;
+}
 
 .pageMain {}
+
+.pageMainInner {
+  @include row;
+}
