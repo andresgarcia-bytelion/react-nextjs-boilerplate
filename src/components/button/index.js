@@ -7,6 +7,8 @@ const Button = ({
   label,
   icon,
   theme,
+  type,
+  disabled,
   onClick,
 }) => {
   let iconElement = '';
@@ -23,7 +25,8 @@ const Button = ({
   return (
     <button
       className={`${styles.button} ${styles[`button${theme}`]}`}
-      type="button"
+      type={type}
+      disabled={disabled}
       onClick={onClick}
     >
       <span className={styles.buttonLabel}>{label}</span>
@@ -36,12 +39,16 @@ Button.propTypes = {
   label: PropTypes.string.isRequired,
   icon: PropTypes.string,
   theme: PropTypes.string,
+  type: PropTypes.string,
+  disabled: PropTypes.bool,
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   icon: '',
   theme: 'default',
+  type: 'button',
+  disabled: false,
   onClick: () => {},
 };
 
