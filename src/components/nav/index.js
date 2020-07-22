@@ -13,17 +13,19 @@ const Nav = ({
   return (
     <nav className={styles.nav} aria-label={title}>
       <h2 className={styles.navTitle}>{title}</h2>
-      <ul className={styles.navList}>{items.map((item) => {
-        const currentLink = router.pathname === item.href;
+      <ul className={styles.navList}>
+        {items.map((item) => {
+          const currentLink = router.pathname === item.href;
 
-        return (
-          <li className={styles.navItem} key={item.href}>
-            <Link href={item.href}>
-              <a className={`${styles.navLink} ${currentLink ? styles.navLinkActive : ''}`} href={item.href}>{item.label}</a>
-            </Link>
-          </li>
-        );
-      })}</ul>
+          return (
+            <li className={styles.navItem} key={item.href}>
+              <Link href={item.href}>
+                <a className={`${styles.navLink} ${currentLink ? styles.navLinkActive : ''}`} href={item.href}>{item.label}</a>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </nav>
   );
 };

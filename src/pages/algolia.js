@@ -1,5 +1,4 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import Layout from '../components/layout';
 import CustomInstantSearch from '../components/algolia/instant-search';
 import CustomSearchBox from '../components/algolia/search-box';
@@ -8,7 +7,6 @@ import CustomMenu from '../components/algolia/menu';
 import CustomClearRefinements from '../components/algolia/clear-refinements';
 import CustomSortBys from '../components/algolia/sort-bys';
 import CustomSortBy from '../components/algolia/sort-by';
-import CustomSortByPlaceholder from '../components/algolia/sort-by-placeholder';
 import CustomHits from '../components/algolia/hits';
 import CustomPagination from '../components/algolia/pagination';
 import CustomToggleRefinement from '../components/algolia/toggle-refinement';

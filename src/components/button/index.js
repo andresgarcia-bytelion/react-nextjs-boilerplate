@@ -1,3 +1,5 @@
+/* eslint-disable react/button-has-type */
+/* expected a static string but we are passing type as a prop */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Check from '../../icons/check.svg';

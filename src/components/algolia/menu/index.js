@@ -7,7 +7,9 @@ import styles from './styles.module.scss';
 
 const cx = classNames.bind(styles);
 
-const Menu = ({ items, currentRefinement, refine, label }) => {
+const Menu = ({
+  items, currentRefinement, refine, label,
+}) => {
   const [visibility, setVisibility] = useState(false);
   const node = useRef(null);
 

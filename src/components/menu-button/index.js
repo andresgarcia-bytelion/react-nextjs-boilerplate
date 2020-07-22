@@ -22,8 +22,4 @@ MenuButton.propTypes = {
   setMenuOpen: PropTypes.func.isRequired,
 };
 
-MenuButton.defaultProps = {
-  theme: 'default',
-};
-
 export default MenuButton;

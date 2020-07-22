@@ -12,23 +12,21 @@ const Input = ({
   required,
   disabled,
   onChange,
-}) => {
-  return (
-    <Field name={name} label={label}>
-      <input
-        className={`${styles.formInput}`}
-        id={name}
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        disabled={disabled}
-        required={required}
-        onChange={onChange}
-      />
-    </Field>
-  );
-};
+}) => (
+  <Field name={name} label={label}>
+    <input
+      className={styles.formInput}
+      id={name}
+      name={name}
+      type={type}
+      placeholder={placeholder}
+      value={value}
+      disabled={disabled}
+      required={required}
+      onChange={onChange}
+    />
+  </Field>
+);
 
 Input.propTypes = {
   name: PropTypes.string.isRequired,
@@ -38,6 +36,7 @@ Input.propTypes = {
   value: PropTypes.string,
   required: PropTypes.bool,
   disabled: PropTypes.bool,
+  onChange: PropTypes.func.isRequired,
 };
 Input.defaultProps = {
   placeholder: '',

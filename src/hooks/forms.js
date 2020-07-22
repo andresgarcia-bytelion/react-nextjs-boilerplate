@@ -7,12 +7,10 @@ export const handleNext = (formStep, setFormStep) => {
 };
 
 export const updateForm = (event, key, setFormData) => {
-  const value = event.target.value;
+  const { value } = event.target;
 
-  setFormData(previousState => {
-    return {
-      ...previousState,
-      [key]: value;
-    }
-  });
+  setFormData((previousState) => ({
+    ...previousState,
+    [key]: value,
+  }));
 };

@@ -18,7 +18,7 @@ const Modal = ({
 
   const modal = cx({
     modal: true,
-    modalVisible: modalVisibility
+    modalVisible: modalVisibility,
   });
 
   return (

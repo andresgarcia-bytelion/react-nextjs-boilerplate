@@ -2,14 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
-const Field = ({ label, name, children }) => {
-  return (
-    <div className={styles.formField}>
-      <label className={styles.formFieldLabel} htmlFor={name}>{label}</label>
-      <div className={styles.formFieldElement}>{children}</div>
-    </div>
-  );
-};
+const Field = ({ label, name, children }) => (
+  <div className={styles.formField}>
+    <label className={styles.formFieldLabel} htmlFor={name}>{label}</label>
+    <div className={styles.formFieldElement}>{children}</div>
+  </div>
+);
 
 Field.propTypes = {
   label: PropTypes.string.isRequired,

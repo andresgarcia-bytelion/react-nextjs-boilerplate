@@ -5,10 +5,12 @@ import styles from './styles.module.scss';
 
 const cx = classNames.bind(styles);
 
-const FormPage = ({ actions, formStep, pageNumber, children }) => {
+const FormPage = ({
+  pageNumber, formStep, actions, children,
+}) => {
   const formPage = cx({
     formPage: true,
-    formPageCurrent: formStep === pageNumber
+    formPageCurrent: formStep === pageNumber,
   });
 
   return (
@@ -17,6 +19,13 @@ const FormPage = ({ actions, formStep, pageNumber, children }) => {
       {actions && <div className={styles.formPageActions}>{actions}</div>}
     </div>
   );
+};
+
+FormPage.propTypes = {
+  pageNumber: PropTypes.number.isRequired,
+  formStep: PropTypes.number.isRequired,
+  actions: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default FormPage;

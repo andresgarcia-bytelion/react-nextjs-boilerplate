@@ -15,8 +15,8 @@ const Menu = () => {
 
   const pageMenu = cx({
     pageMenu: true,
-    pageMenuOpen: menuOpen
-  })
+    pageMenuOpen: menuOpen,
+  });
 
   return (
     <div className={styles.pageMenuWrapper} ref={node}>
