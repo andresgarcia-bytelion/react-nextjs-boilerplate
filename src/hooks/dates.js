@@ -1,5 +1,7 @@
 import moment from 'moment';
 
-export const formatDate = (date) => moment(date).format('M/D/YYYY');
+const dateFormat = 'M/D/YYYY';
 
-export const formatDateTimestamp = (date) => moment.unix(date).utc().format('M/D/YYYY');
+export const formatDate = (date) => moment(date).format(dateFormat);
+
+export const formatDateTimestamp = (date) => moment.unix(date).utc().format(dateFormat);

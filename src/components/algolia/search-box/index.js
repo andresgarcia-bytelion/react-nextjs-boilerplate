@@ -1,7 +1,7 @@
 import React from 'react';
 import { connectSearchBox } from 'react-instantsearch-dom';
 import MagnifyingGlass from '../../../icons/magnifying-glass.svg';
-import MiniClose from '../../../icons/mini-close.svg';
+import Close from '../../../icons/close.svg';
 import styles from './styles.module.scss';
 
 const SearchBox = ({ currentRefinement, refine, placeholder }) => (
@@ -30,7 +30,7 @@ const SearchBox = ({ currentRefinement, refine, placeholder }) => (
         }}
       >
         <span className={styles.searchResetLabel}>Reset query</span>
-        <MiniClose className={styles.searchResetIcon} />
+        <Close className={styles.searchResetIcon} />
       </button>
     )}
   </form>

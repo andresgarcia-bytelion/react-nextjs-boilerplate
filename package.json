@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "scripts": {
     "dev": "next",
+    "custom": "next -p 8080",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .js --fix"

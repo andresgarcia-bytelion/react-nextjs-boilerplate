@@ -3,6 +3,7 @@ import { useAppContext } from '../contexts';
 import TestApi from '../services/test';
 import Layout from '../components/layout';
 import Button from '../components/button';
+import History from '../components/history';
 import Form from '../components/forms/form';
 import Page1 from '../components/forms/test-form/page-1';
 import Page2 from '../components/forms/test-form/page-2';
@@ -21,6 +22,17 @@ const Components = () => {
       <p>{items}</p>
       <p>{title}</p>
       <Button label="Boop Me" />
+      <History
+        paths={[
+          {
+            path: '/',
+            label: 'Home',
+          },
+          {
+            label: 'Components',
+          },
+        ]}
+      />
       <Form title="Form Title">
         <Page1
           formStep={formStep}

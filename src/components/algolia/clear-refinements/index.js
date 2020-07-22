@@ -1,6 +1,6 @@
 import React from 'react';
 import { connectCurrentRefinements } from 'react-instantsearch-dom';
-import MiniClose from '../../../icons/mini-close.svg';
+import Close from '../../../icons/close.svg';
 import styles from './styles.module.scss';
 
 const ClearRefinements = ({ items, refine }) => (
@@ -11,7 +11,7 @@ const ClearRefinements = ({ items, refine }) => (
     disabled={!items.length}
   >
     <span className={styles.clearRefinementsLabel}>Reset Filters</span>
-    <MiniClose className={styles.clearRefinementsIcon} />
+    <Close className={styles.clearRefinementsIcon} />
   </button>
 );
 

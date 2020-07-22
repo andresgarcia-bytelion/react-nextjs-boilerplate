@@ -14,3 +14,18 @@ export const updateForm = (event, key, setFormData) => {
     [key]: value,
   }));
 };
+
+export const updateBatchForm = (updates, setFormData) => {
+  setFormData((previousState) => {
+    const newState = {};
+
+    updates.forEach((update) => {
+      newState[update.key] = update.value;
+    });
+
+    return ({
+      ...previousState,
+      ...newState,
+    });
+  });
+};
