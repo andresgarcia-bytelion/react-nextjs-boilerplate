@@ -8,16 +8,20 @@
 	"extends": [
 		"airbnb",
 		"eslint:recommended",
-		"plugin:jsx-a11y/recommended"
+		"plugin:jsx-a11y/recommended",
+    "plugin:security/recommended",
 	],
 	"plugins": [
 		"jsx-a11y",
 		"no-secrets",
 		"react",
-		"react-hooks"
+		"react-hooks",
+    "security",
+    "simple-import-sort"
 	],
 	"rules": {
     "consistent-return": 0,
+    "import/extensions": "off",
     "import/no-extraneous-dependencies": 0,
 		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/prop-types": "off",

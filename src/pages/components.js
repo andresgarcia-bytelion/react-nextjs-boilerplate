@@ -12,16 +12,9 @@ const Components = () => {
   const { response, isLoading } = TestApi.getAll();
   const { title } = useAppContext();
   const [formStep, setFormStep] = useState(1);
-  const items = response && !isLoading
-    ? response.map((item) => (JSON.stringify(item))) : '';
 
   return (
     <Layout title="Components">
-      <h2>Components Playground</h2>
-      <p>{response && !isLoading && JSON.stringify(response)}</p>
-      <p>{items}</p>
-      <p>{title}</p>
-      <Button label="Boop Me" />
       <History
         paths={[
           {
@@ -29,10 +22,13 @@ const Components = () => {
             label: 'Home',
           },
           {
-            label: 'Components',
+            label: 'Component Playground',
           },
         ]}
       />
+      <p><strong>API Services Response:</strong> {response && !isLoading && JSON.stringify(response)}</p>
+      <p><strong>App Context API Response:</strong> {title}</p>
+      <Button label="Boop Me" />
       <Form title="Form Title">
         <Page1
           formStep={formStep}
