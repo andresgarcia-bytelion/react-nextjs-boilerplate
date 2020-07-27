@@ -6,11 +6,11 @@ import styles from './styles.module.scss';
 const Input = ({
   name,
   label,
-  type,
   placeholder,
   value,
-  required,
+  type,
   disabled,
+  required,
   onChange,
 }) => (
   <Field name={name} label={label}>
@@ -31,11 +31,11 @@ const Input = ({
 Input.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string,
-  required: PropTypes.bool,
+  type: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
+  required: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
 };
 Input.defaultProps = {

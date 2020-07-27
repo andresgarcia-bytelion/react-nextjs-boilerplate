@@ -11,6 +11,10 @@ import Page2 from '../components/forms/test-form/page-2';
 const Components = () => {
   const { response, isLoading } = TestApi.getAll();
   const { title } = useAppContext();
+  const [formData, setFormData] = useState({
+    inputTest: 'inputTest',
+    textareaTest: 'textareaTest'
+  });
   const [formStep, setFormStep] = useState(1);
 
   return (
@@ -26,11 +30,19 @@ const Components = () => {
           },
         ]}
       />
-      <p><strong>API Services Response:</strong> {response && !isLoading && JSON.stringify(response)}</p>
-      <p><strong>App Context API Response:</strong> {title}</p>
+      <p>
+        <strong>API Services Response: </strong>
+        {response && !isLoading && JSON.stringify(response)}
+      </p>
+      <p>
+        <strong>App Context API Response: </strong>
+        {title}
+      </p>
       <Button label="Boop Me" />
       <Form title="Form Title">
         <Page1
+          formData={formData}
+          setFormData={setFormData}
           formStep={formStep}
           setFormStep={setFormStep}
         />

@@ -6,8 +6,9 @@ export const handleNext = (formStep, setFormStep) => {
   setFormStep(formStep + 1);
 };
 
-export const updateForm = (event, key, setFormData) => {
+export const updateForm = (event, setFormData) => {
   const { value } = event.target;
+  const key = event.target.getAttribute('name');
 
   setFormData((previousState) => ({
     ...previousState,

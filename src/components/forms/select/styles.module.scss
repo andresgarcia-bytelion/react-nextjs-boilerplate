@@ -1,0 +1,27 @@
+@import '../../../styles';
+
+.formSelect {
+  width: 100%;
+
+	appearance: none;
+	background: #fff;
+	border: 1px solid #e3e6ee;
+	border-radius: 3px;
+	color: #5c5c5c;
+	cursor: pointer;
+	padding: 14px 30px 14px 14px;
+
+	&:disabled {
+		cursor: default;
+		opacity: 1;
+	}
+}
+
+.formSelectIcon {
+	position: absolute;
+	top: 50%;
+	right: 14px;
+
+	pointer-events: none;
+	transform: translate(0, -50%);
+}

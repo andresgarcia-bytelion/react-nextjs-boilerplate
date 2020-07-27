@@ -7,11 +7,10 @@ import styles from './styles.module.scss';
 const Textarea = ({
   name,
   label,
-  type,
   placeholder,
   value,
-  required,
   disabled,
+  required,
   onChange,
 }) => (
   <Field name={name} label={label}>
@@ -19,7 +18,6 @@ const Textarea = ({
       className={`${inputStyles.formInput} ${styles.formTextarea}`}
       id={name}
       name={name}
-      type={type}
       placeholder={placeholder}
       value={value}
       disabled={disabled}
@@ -32,11 +30,10 @@ const Textarea = ({
 Textarea.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string,
-  required: PropTypes.bool,
   disabled: PropTypes.bool,
+  required: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
 };
 Textarea.defaultProps = {

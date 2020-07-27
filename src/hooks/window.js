@@ -3,12 +3,10 @@ import { useState, useEffect } from 'react';
 const getWindow = () => {
   const isClient = typeof window === 'object';
 
-  const getWindowSize = () => {
-    return {
-      width: isClient ? window.innerWidth : undefined,
-      height: isClient ? window.innerHeight : undefined,
-    };
-  }
+  const getWindowSize = () => ({
+    width: isClient ? window.innerWidth : undefined,
+    height: isClient ? window.innerHeight : undefined,
+  });
 
   const [windowSize, setWindowSize] = useState(getWindowSize);
 
