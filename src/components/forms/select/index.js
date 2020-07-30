@@ -4,21 +4,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Field from '../field';
 import CaretDown from '../../../icons/caret-down.svg';
+import { convertToId } from '../../../hooks/strings';
 import styles from './styles.module.scss';
 
 const Select = ({
-  name,
   label,
   items,
   disabled,
   required,
   onChange,
 }) => (
-  <Field name={name} label={label}>
+  <Field label={label}>
     <select
       className={styles.formSelect}
-      id={name}
-      name={name}
+      id={convertToId(label)}
+      name={convertToId(label)}
       disabled={disabled}
       required={required}
       onChange={onChange}
@@ -32,7 +32,6 @@ const Select = ({
 );
 
 Select.propTypes = {
-  name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired,
   disabled: PropTypes.bool,

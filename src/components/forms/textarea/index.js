@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Field from '../field';
+import { convertToId } from '../../../hooks/strings';
 import inputStyles from '../input/styles.module.scss';
 import styles from './styles.module.scss';
 
 const Textarea = ({
-  name,
   label,
   placeholder,
   value,
@@ -13,11 +13,11 @@ const Textarea = ({
   required,
   onChange,
 }) => (
-  <Field name={name} label={label}>
+  <Field label={label}>
     <textarea
       className={`${inputStyles.formInput} ${styles.formTextarea}`}
-      id={name}
-      name={name}
+      id={convertToId(label)}
+      name={convertToId(label)}
       placeholder={placeholder}
       value={value}
       disabled={disabled}
@@ -28,7 +28,6 @@ const Textarea = ({
 );
 
 Textarea.propTypes = {
-  name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string,

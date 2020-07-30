@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { convertToId } from '../../../hooks/strings';
 import Field from '../field';
 import styles from './styles.module.scss';
 
 const Input = ({
-  name,
   label,
   placeholder,
   value,
@@ -13,11 +13,11 @@ const Input = ({
   required,
   onChange,
 }) => (
-  <Field name={name} label={label}>
+  <Field label={label}>
     <input
       className={styles.formInput}
-      id={name}
-      name={name}
+      id={convertToId(label)}
+      name={convertToId(label)}
       type={type}
       placeholder={placeholder}
       value={value}
@@ -29,7 +29,6 @@ const Input = ({
 );
 
 Input.propTypes = {
-  name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string,
