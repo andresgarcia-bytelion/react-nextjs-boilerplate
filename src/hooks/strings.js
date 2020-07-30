@@ -1,3 +1,1 @@
-export const convertToId = (string) => {
-  return string.replace(/ /g, '').toLowerCase();
-};
+export const convertToId = (string) => string.replace(/ /g, '').toLowerCase();
