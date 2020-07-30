@@ -7,8 +7,8 @@ export const handleNext = (formStep, setFormStep) => {
 };
 
 export const updateForm = (event, setFormData) => {
-  const { value } = event.target;
   const key = event.target.getAttribute('name');
+  const { value } = event.target;
 
   setFormData((previousState) => ({
     ...previousState,
@@ -16,17 +16,9 @@ export const updateForm = (event, setFormData) => {
   }));
 };
 
-export const updateBatchForm = (updates, setFormData) => {
-  setFormData((previousState) => {
-    const newState = {};
-
-    updates.forEach((update) => {
-      newState[update.key] = update.value;
-    });
-
-    return ({
-      ...previousState,
-      ...newState,
-    });
-  });
+export const batchUpdateForm = (updates, setFormData) => {
+  setFormData((previousState) => ({
+    ...previousState,
+    ...updates,
+  }));
 };

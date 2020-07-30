@@ -4,9 +4,11 @@ import FormRow from '../row';
 import Input from '../input';
 import Textarea from '../textarea';
 import Select from '../select';
-import { updateForm } from '../../../hooks/forms'
+import { updateForm, batchUpdateForm } from '../../../hooks/forms';
 
-const Page1 = ({ formData, setFormData, formStep, setFormStep }) => (
+const Page1 = ({
+  formData, setFormData, formStep, setFormStep,
+}) => (
   <FormPage
     pageNumber={1}
     formStep={formStep}
@@ -15,6 +17,10 @@ const Page1 = ({ formData, setFormData, formStep, setFormStep }) => (
         onClick={(e) => {
           e.preventDefault();
           setFormStep(formStep + 1);
+          batchUpdateForm({
+            testing: 'yes',
+            test: true,
+          }, setFormData);
         }}
         type="button"
       >
@@ -28,7 +34,7 @@ const Page1 = ({ formData, setFormData, formStep, setFormStep }) => (
         label="Test Input"
         type="text"
         value={formData.inputTest}
-        onChange={event => {
+        onChange={(event) => {
           updateForm(event, setFormData);
         }}
       />
@@ -37,7 +43,7 @@ const Page1 = ({ formData, setFormData, formStep, setFormStep }) => (
         label="Test Textarea"
         type="text"
         value={formData.textareaTest}
-        onChange={event => {
+        onChange={(event) => {
           updateForm(event, setFormData);
         }}
       />
@@ -46,16 +52,16 @@ const Page1 = ({ formData, setFormData, formStep, setFormStep }) => (
         label="Test Select"
         items={[
           {
-            value: "Yes",
-            label: "Yes"
+            value: 'Yes',
+            label: 'Yes',
           },
           {
-            value: "No",
-            label: "No"
-          }
+            value: 'No',
+            label: 'No',
+          },
         ]}
         value={formData.selectTest}
-        onChange={event => {
+        onChange={(event) => {
           updateForm(event, setFormData);
         }}
       />

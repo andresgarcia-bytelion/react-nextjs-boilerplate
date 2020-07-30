@@ -11,19 +11,17 @@ const Button = ({
   type,
   disabled,
   onClick,
-}) => {
-  return (
-    <button
-      className={`${styles.button} ${styles[`button${theme}`]}`}
-      type={type}
-      disabled={disabled}
-      onClick={onClick}
-    >
-      <span className={styles.buttonLabel}>{label}</span>
-      {icon && <span className={styles.buttonIcon}>{icon}</span>}
-    </button>
-  );
-};
+}) => (
+  <button
+    className={`${styles.button} ${styles[`button${theme}`]}`}
+    type={type}
+    disabled={disabled}
+    onClick={onClick}
+  >
+    <span className={styles.buttonLabel}>{label}</span>
+    {icon && <span className={styles.buttonIcon}>{icon}</span>}
+  </button>
+);
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,

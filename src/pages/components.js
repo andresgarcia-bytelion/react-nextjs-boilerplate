@@ -13,7 +13,7 @@ const Components = () => {
   const { title } = useAppContext();
   const [formData, setFormData] = useState({
     inputTest: 'inputTest',
-    textareaTest: 'textareaTest'
+    textareaTest: 'textareaTest',
   });
   const [formStep, setFormStep] = useState(1);
 

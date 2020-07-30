@@ -23,6 +23,7 @@
     "consistent-return": 0,
     "import/extensions": "off",
     "import/no-extraneous-dependencies": 0,
+    "max-len": "off",
 		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/prop-types": "off",
     "react/forbid-prop-types": ["error", { "forbid": ["any"] }]
