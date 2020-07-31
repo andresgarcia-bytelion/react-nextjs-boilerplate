@@ -35,4 +35,4 @@ Nav.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default Nav;
+export default React.memo(Nav);

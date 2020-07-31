@@ -42,4 +42,4 @@ Textarea.defaultProps = {
   disabled: false,
 };
 
-export default Textarea;
+export default React.memo(Textarea);

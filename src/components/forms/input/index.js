@@ -44,4 +44,4 @@ Input.defaultProps = {
   disabled: false,
 };
 
-export default Input;
+export default React.memo(Input);

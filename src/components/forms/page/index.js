@@ -28,4 +28,4 @@ FormPage.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default FormPage;
+export default React.memo(FormPage);

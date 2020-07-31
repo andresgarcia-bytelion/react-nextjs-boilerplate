@@ -24,4 +24,4 @@ FormRow.defaultProps = {
   columns: 1,
 };
 
-export default FormRow;
+export default React.memo(FormRow);

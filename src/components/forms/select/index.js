@@ -43,4 +43,4 @@ Select.defaultProps = {
   disabled: false,
 };
 
-export default Select;
+export default React.memo(Select);

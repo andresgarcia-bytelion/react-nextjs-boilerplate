@@ -18,4 +18,4 @@ Form.propTypes = {
   children: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default Form;
+export default React.memo(Form);

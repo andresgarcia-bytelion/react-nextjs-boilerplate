@@ -40,4 +40,4 @@ const History = ({ paths }) => {
 
 History.propTypes = propTypes;
 
-export default History;
+export default React.memo(History);

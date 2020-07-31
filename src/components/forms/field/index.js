@@ -15,4 +15,4 @@ Field.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Field;
+export default React.memo(Field);

@@ -22,4 +22,4 @@ MenuButton.propTypes = {
   setMenuOpen: PropTypes.func.isRequired,
 };
 
-export default MenuButton;
+export default React.memo(MenuButton);
