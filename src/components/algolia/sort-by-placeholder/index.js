@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from 'sort-by/styles.module.scss';
+import styles from 'components/algolia/sort-by/styles.module.scss';
 
 const CustomSortByPlaceholder = ({ label }) => (
   <td className={styles.sortBy}>
