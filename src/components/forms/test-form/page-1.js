@@ -41,7 +41,6 @@ const Page1 = ({
       <Textarea
         name="textareaTest"
         label="Test Textarea"
-        type="text"
         value={formData.textareaTest}
         onChange={(event) => {
           updateForm(event, setFormData);
@@ -56,8 +55,8 @@ const Page1 = ({
             label: 'Yes',
           },
           {
-            value: 'No',
-            label: 'No',
+            value: 'Patrone',
+            label: 'Patrone',
           },
         ]}
         value={formData.selectTest}

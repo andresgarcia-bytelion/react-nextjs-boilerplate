@@ -12,8 +12,9 @@ const Components = () => {
   const { response, isLoading } = TestApi.getAll();
   const { title } = useAppContext();
   const [formData, setFormData] = useState({
-    inputTest: 'inputTest',
-    textareaTest: 'textareaTest',
+    inputTest: 'Deezle',
+    textareaTest: 'Bot',
+    selectTest: 'Patrone'
   });
   const [formStep, setFormStep] = useState(1);
 

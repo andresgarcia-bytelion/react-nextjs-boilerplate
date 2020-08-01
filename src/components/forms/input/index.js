@@ -6,6 +6,7 @@ import styles from './styles.module.scss';
 
 const Input = ({
   label,
+  name,
   placeholder,
   value,
   type,
@@ -13,11 +14,11 @@ const Input = ({
   required,
   onChange,
 }) => (
-  <Field label={label}>
+  <Field label={label} name={name}>
     <input
       className={styles.formInput}
-      id={convertToId(label)}
-      name={convertToId(label)}
+      id={name}
+      name={name}
       type={type}
       placeholder={placeholder}
       value={value}
@@ -30,6 +31,7 @@ const Input = ({
 
 Input.propTypes = {
   label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string,
   type: PropTypes.string.isRequired,

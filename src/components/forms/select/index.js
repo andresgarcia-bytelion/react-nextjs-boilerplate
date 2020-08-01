@@ -9,16 +9,19 @@ import styles from './styles.module.scss';
 
 const Select = ({
   label,
+  name,
   items,
+  value,
   disabled,
   required,
   onChange,
 }) => (
-  <Field label={label}>
+  <Field label={label} name={name}>
     <select
       className={styles.formSelect}
-      id={convertToId(label)}
-      name={convertToId(label)}
+      id={name}
+      name={name}
+      value={value}
       disabled={disabled}
       required={required}
       onChange={onChange}
@@ -33,6 +36,7 @@ const Select = ({
 
 Select.propTypes = {
   label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired,
   disabled: PropTypes.bool,
   required: PropTypes.bool,
