@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { convertToId } from '../../../hooks/strings';
 import styles from './styles.module.scss';
 
 const Field = ({ label, name, children }) => (

@@ -14,7 +14,9 @@
 	&:disabled {
 		cursor: default;
 		opacity: 1;
-	}
+  }
+
+  &:invalid {}
 }
 
 .formSelectIcon {

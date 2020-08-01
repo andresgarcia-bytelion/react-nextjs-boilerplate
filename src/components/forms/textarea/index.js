@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Field from '../field';
-import { convertToId } from '../../../hooks/strings';
 import inputStyles from '../input/styles.module.scss';
 import styles from './styles.module.scss';
 

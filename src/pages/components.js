@@ -14,7 +14,7 @@ const Components = () => {
   const [formData, setFormData] = useState({
     inputTest: 'Deezle',
     textareaTest: 'Bot',
-    selectTest: 'Patrone'
+    selectTest: 'Patrone',
   });
   const [formStep, setFormStep] = useState(1);
 

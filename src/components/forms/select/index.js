@@ -4,7 +4,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Field from '../field';
 import CaretDown from '../../../icons/caret-down.svg';
-import { convertToId } from '../../../hooks/strings';
 import styles from './styles.module.scss';
 
 const Select = ({
