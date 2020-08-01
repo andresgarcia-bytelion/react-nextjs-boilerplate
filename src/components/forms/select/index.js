@@ -2,8 +2,8 @@
 /* react throws an error if onblur is used in place on onchange */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Field from '../field';
-import CaretDown from '../../../icons/caret-down.svg';
+import Field from 'components/forms/field';
+import CaretDown from 'icons/caret-down.svg';
 import styles from './styles.module.scss';
 
 const Select = ({

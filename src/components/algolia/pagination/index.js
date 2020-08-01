@@ -1,7 +1,7 @@
 import React from 'react';
 import { connectPagination } from 'react-instantsearch-dom';
-import CaretLeft from '../../../icons/caret-left.svg';
-import CaretRight from '../../../icons/caret-right.svg';
+import CaretLeft from 'icons/caret-left.svg';
+import CaretRight from 'icons/caret-right.svg';
 import styles from './styles.module.scss';
 
 const Pagination = ({ currentRefinement, nbPages, refine }) => (

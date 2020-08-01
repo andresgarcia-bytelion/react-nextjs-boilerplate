@@ -1,6 +1,6 @@
 import React from 'react';
 import { connectCurrentRefinements } from 'react-instantsearch-dom';
-import Close from '../../../icons/close.svg';
+import Close from 'icons/close.svg';
 import styles from './styles.module.scss';
 
 const ClearRefinements = ({ items, refine }) => (

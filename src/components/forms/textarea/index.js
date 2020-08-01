@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Field from '../field';
-import inputStyles from '../input/styles.module.scss';
+import Field from 'components/forms/field';
+import inputStyles from 'components/forms/input/styles.module.scss';
 import styles from './styles.module.scss';
 
 const Textarea = ({

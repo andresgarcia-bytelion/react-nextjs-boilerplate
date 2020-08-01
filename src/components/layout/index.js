@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
-import Header from './header';
-import Footer from './footer';
+import Header from 'components/layout/header';
+import Footer from 'components/layout/footer';
 import styles from './styles.module.scss';
 
 const site = {

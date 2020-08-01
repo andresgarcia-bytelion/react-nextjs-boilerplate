@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import classNames from 'classnames/bind';
-import OnClickOutside from '../../../hooks/on-click-outside';
-import MenuButton from '../../menu-button';
-import Nav from '../../nav';
+import OnClickOutside from 'hooks/on-click-outside';
+import MenuButton from 'components/menu-button';
+import Nav from 'components/nav';
 import styles from './styles.module.scss';
 
 const cx = classNames.bind(styles);

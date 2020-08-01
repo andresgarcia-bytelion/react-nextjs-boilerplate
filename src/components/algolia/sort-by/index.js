@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { connectSortBy } from 'react-instantsearch-dom';
-import AlphabeticalSort from '../../../icons/alphabetical-sort.svg';
-import NumericalSort from '../../../icons/numerical-sort.svg';
-import DefaultSort from '../../../icons/default-sort.svg';
+import AlphabeticalSort from 'icons/alphabetical-sort.svg';
+import NumericalSort from 'icons/numerical-sort.svg';
+import DefaultSort from 'icons/default-sort.svg';
 import styles from './styles.module.scss';
 
 const SortBy = ({ items, refine, label }) => {

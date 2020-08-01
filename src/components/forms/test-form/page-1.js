@@ -1,10 +1,10 @@
 import React from 'react';
-import FormPage from '../page';
-import FormRow from '../row';
-import Input from '../input';
-import Textarea from '../textarea';
-import Select from '../select';
-import { updateForm, batchUpdateForm } from '../../../hooks/forms';
+import FormPage from 'components/forms/page';
+import FormRow from 'components/forms/row';
+import Input from 'components/forms/input';
+import Textarea from 'components/forms/textarea';
+import Select from 'components/forms/select';
+import { updateForm, batchUpdateForm } from 'hooks/forms';
 
 const Page1 = ({
   formData, setFormData, formStep, setFormStep,

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import ArrowLeft from '../../icons/arrow-left.svg';
+import ArrowLeft from 'icons/arrow-left.svg';
 import styles from './styles.module.scss';
 
 const propTypes = {

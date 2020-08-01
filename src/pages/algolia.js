@@ -1,15 +1,15 @@
 import React from 'react';
-import Layout from '../components/layout';
-import CustomInstantSearch from '../components/algolia/instant-search';
-import CustomSearchBox from '../components/algolia/search-box';
-import CustomMenus from '../components/algolia/menus';
-import CustomMenu from '../components/algolia/menu';
-import CustomClearRefinements from '../components/algolia/clear-refinements';
-import CustomSortBys from '../components/algolia/sort-bys';
-import CustomSortBy from '../components/algolia/sort-by';
-import CustomHits from '../components/algolia/hits';
-import CustomPagination from '../components/algolia/pagination';
-import CustomToggleRefinement from '../components/algolia/toggle-refinement';
+import Layout from 'components/layout';
+import CustomInstantSearch from 'components/algolia/instant-search';
+import CustomSearchBox from 'components/algolia/search-box';
+import CustomMenus from 'components/algolia/menus';
+import CustomMenu from 'components/algolia/menu';
+import CustomClearRefinements from 'components/algolia/clear-refinements';
+import CustomSortBys from 'components/algolia/sort-bys';
+import CustomSortBy from 'components/algolia/sort-by';
+import CustomHits from 'components/algolia/hits';
+import CustomPagination from 'components/algolia/pagination';
+import CustomToggleRefinement from 'components/algolia/toggle-refinement';
 
 const Algolia = () => {
   const rootIndex = process.env.algoliaIndex;
