@@ -7,4 +7,4 @@ export const closeModal = (setModalVisibility, setModalStep) => {
       setModalStep(1);
     }, 250);
   }
-}
+};
