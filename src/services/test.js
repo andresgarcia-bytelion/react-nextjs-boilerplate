@@ -1,11 +1,11 @@
 import useApi from 'lib/use-api';
 
-const root = 'questions';
+const root = '/api/questions';
 
 export default {
-  getAll: () => useApi(`${process.env.apiRoot}/${root}`),
-  get: (id) => useApi(`${process.env.apiRoot}/${root}/${id}`),
-  put: (id, data) => useApi(`${process.env.apiRoot}/${root}/${id}`, {
+  getAll: () => useApi(`${root}`),
+  get: (id) => useApi(`${root}/${id}`),
+  put: (id, data) => useApi(`${root}/${id}`, {
     method: 'PUT',
     body: data,
   }),

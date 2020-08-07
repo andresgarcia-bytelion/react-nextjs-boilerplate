@@ -46,8 +46,10 @@ const useApi = (url, options = {}) => {
         );
       }
     };
+
     fetchData();
   }, []);
+
   return state;
 };
 
