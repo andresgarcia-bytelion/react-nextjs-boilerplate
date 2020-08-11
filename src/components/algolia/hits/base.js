@@ -1,16 +1,10 @@
-import moment from 'moment';
+import { formatDate } from 'hooks/dates';
 
 const Base = (hit) => [
   {
     label: 'Date Created',
     value: hit.datepublished
-      ? moment(hit.datepublished).format('M/D/YYYY')
-      : '',
-  },
-  {
-    label: 'Date Used',
-    value: hit.datelastupdated
-      ? moment(hit.datelastupdated).format('M/D/YYYY')
+      ? formatDate(hit.datepublished)
       : '',
   },
   {

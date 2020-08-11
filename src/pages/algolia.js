@@ -11,6 +11,7 @@ import {
   SortBy,
   SortByPlaceholder,
   SortBys,
+  ToggleRefinement,
 } from 'components/algolia';
 
 const Algolia = () => {
@@ -48,20 +49,6 @@ const Algolia = () => {
             <SortBy
               items={[
                 {
-                  value: `${index}_Date_Used_Asc`,
-                  label: 'Date Used asc.',
-                },
-                {
-                  value: `${index}_Date_Used_Desc`,
-                  label: 'Date Used desc.',
-                },
-              ]}
-              defaultRefinement={index}
-              label="Date Used"
-            />
-            <SortBy
-              items={[
-                {
                   value: `${index}_Name_Asc`,
                   label: 'Name asc.',
                 },
@@ -73,6 +60,7 @@ const Algolia = () => {
               defaultRefinement={index}
               label="Name"
             />
+            <SortByPlaceholder label="Test" />
           </SortBys>
         </Hits>
         <Pagination defaultRefinement={1} />
