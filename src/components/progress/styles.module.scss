@@ -1,0 +1,21 @@
+@import '../../styles';
+
+.progress {}
+
+.progressVisual {
+  height: 10px;
+
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.progressQueue {
+  height: 100%;
+
+  background: $accent;
+  transition: width $speed;
+
+  &Complete {}
+}
+
+.progressHint {}

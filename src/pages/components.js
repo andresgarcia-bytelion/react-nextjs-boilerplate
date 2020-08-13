@@ -4,6 +4,8 @@ import TestApi from 'services/test';
 import Layout from 'components/layout';
 import Button from 'components/button';
 import History from 'components/history';
+import Progress from 'components/progress';
+import Tabs from 'components/tabs';
 import Form from 'components/forms/form';
 import Page1 from 'components/forms/test-form/page-1';
 import Page2 from 'components/forms/test-form/page-2';
@@ -39,6 +41,25 @@ const Components = () => {
         <strong>App Context API Response: </strong>
         {title}
       </p>
+      <Progress ratio={[1, 4]} />
+      <Tabs
+        items={[
+          {
+            id: '0',
+            label: 'First',
+            onClick: () => {
+              // router.push('/path');
+            },
+          },
+          {
+            id: '1',
+            label: 'Second',
+            onClick: () => {
+              // setState(prevState => !prevState);
+            },
+          },
+        ]}
+      />
       <Button label="Boop Me" />
       <Form title="Form Title">
         <Page1
