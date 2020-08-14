@@ -9,6 +9,6 @@ const <%=Name%> = () => {
   return ();
 };
 
-Toggle.propTypes = {};
+<%=Name%>.propTypes = {};
 
 export default <%=Name%>;

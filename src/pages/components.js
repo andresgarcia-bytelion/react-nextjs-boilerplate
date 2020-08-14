@@ -7,6 +7,7 @@ import History from 'components/history';
 import Progress from 'components/progress';
 import Toggle from 'components/toggle';
 import Tabs from 'components/tabs';
+import Toast from 'components/toast';
 import Form from 'components/forms/form';
 import Page1 from 'components/forms/test-form/page-1';
 import Page2 from 'components/forms/test-form/page-2';
@@ -20,6 +21,7 @@ const Components = () => {
     selectTest: 'Patrone',
   });
   const [formStep, setFormStep] = useState(1);
+  const [toastVisible, setToastVisible] = useState(false);
 
   return (
     <Layout title="Components">
@@ -42,7 +44,17 @@ const Components = () => {
         <strong>App Context API Response: </strong>
         {title}
       </p>
-      <Button label="Boop Me" />
+      <Button
+        label="Boop Me"
+        onClick={() => {
+          setToastVisible((prevState) => !prevState);
+        }}
+      />
+      <Toast
+        label="You Booped Me"
+        visible={toastVisible}
+        setVisible={setToastVisible}
+      />
       <Progress ratio={[1, 4]} />
       <Tabs
         items={[
