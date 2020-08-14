@@ -11,6 +11,7 @@
 
 .tabTrigger {
   appearance: none;
+  background: #eee;
   border: 0;
   color: #000;
   cursor: pointer;
@@ -28,5 +29,6 @@
   &Active {
     background: $accent;
     color: #fff;
+    pointer-events: none;
   }
 }

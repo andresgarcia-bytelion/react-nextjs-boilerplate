@@ -5,6 +5,7 @@ import Layout from 'components/layout';
 import Button from 'components/button';
 import History from 'components/history';
 import Progress from 'components/progress';
+import Toggle from 'components/toggle';
 import Tabs from 'components/tabs';
 import Form from 'components/forms/form';
 import Page1 from 'components/forms/test-form/page-1';
@@ -41,6 +42,7 @@ const Components = () => {
         <strong>App Context API Response: </strong>
         {title}
       </p>
+      <Button label="Boop Me" />
       <Progress ratio={[1, 4]} />
       <Tabs
         items={[
@@ -60,7 +62,7 @@ const Components = () => {
           },
         ]}
       />
-      <Button label="Boop Me" />
+      <Toggle label="Show Treasure" />
       <Form title="Form Title">
         <Page1
           formData={formData}
