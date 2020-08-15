@@ -11,10 +11,10 @@ const Menu = ({
   items, currentRefinement, refine, label,
 }) => {
   const [visibility, setVisibility] = useState(false);
-  const node = useRef(null);
+  const filter = useRef(null);
 
   const bodyClick = (event) => {
-    if (node.current && !node.current.contains(event.target)) {
+    if (filter.current && !filter.current.contains(event.target)) {
       setVisibility(false);
     }
   };
@@ -31,7 +31,7 @@ const Menu = ({
   });
 
   return (
-    <div className={styles.filter} ref={node}>
+    <div className={styles.filter} ref={filter}>
       <button
         className={styles.filterButton}
         disabled={items.length <= 0}

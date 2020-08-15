@@ -9,9 +9,9 @@ const cx = classNames.bind(styles);
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const node = useRef();
+  const pageMenuWrapperRef = useRef();
 
-  OnClickOutside(node, () => setMenuOpen(false));
+  OnClickOutside(pageMenuWrapperRef, () => setMenuOpen(false));
 
   const pageMenu = cx({
     pageMenu: true,
@@ -19,7 +19,7 @@ const Menu = () => {
   });
 
   return (
-    <div className={styles.pageMenuWrapper} ref={node}>
+    <div className={styles.pageMenuWrapper} ref={pageMenuWrapperRef}>
       <MenuButton
         label="Menu"
         menuOpen={menuOpen}
@@ -47,7 +47,6 @@ const Menu = () => {
           menuOpen={menuOpen}
           setMenuOpen={setMenuOpen}
           label="Close Menu"
-          theme="alt"
         />
       </div>
     </div>

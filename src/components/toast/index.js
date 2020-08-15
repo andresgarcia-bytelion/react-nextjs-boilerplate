@@ -44,7 +44,7 @@ const Toast = ({
 Toast.propTypes = {
   icon: PropTypes.element,
   label: PropTypes.string.isRequired,
-  setVisible: PropTypes.bool.isRequired,
+  setVisible: PropTypes.func.isRequired,
   visible: PropTypes.bool.isRequired,
 };
 
