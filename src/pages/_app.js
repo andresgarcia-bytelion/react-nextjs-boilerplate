@@ -2,6 +2,7 @@
 
 import React from 'react';
 import App from 'next/app';
+import { Provider } from 'next-auth/client';
 import whyDidYouRender from '@welldone-software/why-did-you-render';
 import AppContextProvider from 'contexts';
 
@@ -18,7 +19,9 @@ class ReturnApp extends App {
 
     return (
       <AppContextProvider>
-        <Component {...pageProps} />
+        <Provider session={pageProps.session}>
+          <Component {...pageProps} />
+        </Provider>
       </AppContextProvider>
     );
   }
