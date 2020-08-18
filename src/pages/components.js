@@ -9,6 +9,7 @@ import Progress from 'components/progress';
 import Toggle from 'components/toggle';
 import Tabs from 'components/tabs';
 import Toast from 'components/toast';
+import UserBubble from 'components/user-bubble';
 import Form from 'components/forms/form';
 import Page1 from 'components/forms/test-form/page-1';
 import Page2 from 'components/forms/test-form/page-2';
@@ -84,6 +85,7 @@ const Components = () => {
           // console.log("Release the Kraken!")
         }}
       />
+      <UserBubble />
       <Form title="Form Title">
         <Page1
           formData={formData}
