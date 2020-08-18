@@ -1,0 +1,43 @@
+@import '../../styles';
+
+.dropdown {
+  @include reset_list;
+
+  width: 100%;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+
+  background: #fff;
+  border: 1px solid #eee;
+  opacity: 0;
+  padding: 11px 0;
+  visibility: hidden;
+  transform: translate3d(0, 4px, 0);
+  transition:
+    opacity $speed,
+    visibility $speed,
+    transform $speed;
+
+  &Visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.dropdownItem {}
+
+.dropdownItemButton {
+  width: 100%;
+
+  background: none;
+  border: 0;
+  padding: 11px 20px;
+  text-align: left;
+
+  &:hover,
+  &:focus {}
+}

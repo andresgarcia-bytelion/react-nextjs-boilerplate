@@ -85,7 +85,18 @@ const Components = () => {
           // console.log("Release the Kraken!")
         }}
       />
-      <UserBubble />
+      <UserBubble
+        items={[
+          {
+            label: 'Profile',
+            onClick: () => {},
+          },
+          {
+            label: 'Sign Out',
+            onClick: () => {},
+          },
+        ]}
+      />
       <Form title="Form Title">
         <Page1
           formData={formData}
