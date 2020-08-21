@@ -10,26 +10,23 @@ const ToggleRefinement = ({
   label,
   refine,
   createURL,
-}) => {
-  const toggleHint = cx({
-    toggleHint: true,
-    toggleHintActive: currentRefinement,
-  });
-
-  return (
-    <a
-      className={styles.toggle}
-      href={createURL(!currentRefinement)}
-      onClick={(event) => {
-        event.preventDefault();
-        refine(!currentRefinement);
-      }}
-    >
-      <span className={styles.toggleLabel}>{label}</span>
-      <span className={toggleHint} />
-    </a>
-  );
-};
+}) => (
+  <a
+    className={styles.toggle}
+    href={createURL(!currentRefinement)}
+    onClick={(event) => {
+      event.preventDefault();
+      refine(!currentRefinement);
+    }}
+  >
+    <span className={styles.toggleLabel}>{label}</span>
+    <span className={cx({
+      toggleHint: true,
+      toggleHintActive: currentRefinement,
+    })}
+    />
+  </a>
+);
 
 const CustomToggleRefinement = connectToggleRefinement(ToggleRefinement);
 

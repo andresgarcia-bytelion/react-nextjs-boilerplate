@@ -5,16 +5,15 @@ import styles from './styles.module.scss';
 
 const cx = classNames.bind(styles);
 
-const FormRow = ({ columns, children }) => {
-  const formRow = cx({
+const FormRow = ({ columns, children }) => (
+  <div className={cx({
     formRow: true,
     formRowTwoColumn: columns,
-  });
-
-  return (
-    <div className={formRow}>{children}</div>
-  );
-};
+  })}
+  >
+    {children}
+  </div>
+);
 
 FormRow.propTypes = {
   children: PropTypes.node.isRequired,

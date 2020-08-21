@@ -8,11 +8,6 @@ const cx = classNames.bind(styles);
 const Toggle = ({ label, onClick }) => {
   const [active, setActive] = useState(false);
 
-  const toggleHint = cx({
-    toggleHint: true,
-    toggleHintActive: active,
-  });
-
   return (
     <button
       className={styles.toggle}
@@ -26,7 +21,11 @@ const Toggle = ({ label, onClick }) => {
       }}
     >
       <span className={styles.toggleLabel}>{label}</span>
-      <span className={toggleHint} />
+      <span className={cx({
+        toggleHint: true,
+        toggleHintActive: active,
+      })}
+      />
     </button>
   );
 };

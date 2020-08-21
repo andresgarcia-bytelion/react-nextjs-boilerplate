@@ -5,26 +5,22 @@ import styles from './styles.module.scss';
 
 const cx = classNames.bind(styles);
 
-const Progress = ({ ratio }) => {
-  const progressQueue = cx({
-    progressQueue: true,
-    progressQueueComplete: ratio[0] === ratio[1],
-  });
-
-  return (
-    <div className={styles.progress}>
-      <div className={styles.progressVisual}>
-        <div
-          className={progressQueue}
-          style={{
-            width: `${(ratio[0] / ratio[1]) * 100}%`,
-          }}
-        />
-      </div>
-      <div className={styles.progressHint}>{`${ratio[0]} / ${ratio[1]}`}</div>
+const Progress = ({ ratio }) => (
+  <div className={styles.progress}>
+    <div className={styles.progressVisual}>
+      <div
+        className={cx({
+          progressQueue: true,
+          progressQueueComplete: ratio[0] === ratio[1],
+        })}
+        style={{
+          width: `${(ratio[0] / ratio[1]) * 100}%`,
+        }}
+      />
     </div>
-  );
-};
+    <div className={styles.progressHint}>{`${ratio[0]} / ${ratio[1]}`}</div>
+  </div>
+);
 
 Progress.propTypes = {
   ratio: PropTypes.array.isRequired,

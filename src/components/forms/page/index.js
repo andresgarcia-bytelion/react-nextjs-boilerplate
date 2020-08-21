@@ -7,19 +7,16 @@ const cx = classNames.bind(styles);
 
 const FormPage = ({
   pageNumber, formStep, actions, children,
-}) => {
-  const formPage = cx({
+}) => (
+  <div className={cx({
     formPage: true,
     formPageCurrent: formStep === pageNumber,
-  });
-
-  return (
-    <div className={formPage}>
-      <div className={styles.formPageFields}>{children}</div>
-      {actions && <div className={styles.formPageActions}>{actions}</div>}
-    </div>
-  );
-};
+  })}
+  >
+    <div className={styles.formPageFields}>{children}</div>
+    {actions && <div className={styles.formPageActions}>{actions}</div>}
+  </div>
+);
 
 FormPage.propTypes = {
   pageNumber: PropTypes.number.isRequired,

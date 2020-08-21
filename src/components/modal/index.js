@@ -16,13 +16,12 @@ const Modal = ({
     setModalVisibility(false);
   };
 
-  const modal = cx({
-    modal: true,
-    modalVisible: modalVisibility,
-  });
-
   return (
-    <div className={modal}>
+    <div className={cx({
+      modal: true,
+      modalVisible: modalVisibility,
+    })}
+    >
       <div className={styles.modalHeader}>
         <h3 className={styles.modalTitle}>{title}</h3>
         <button

@@ -10,27 +10,23 @@ const Tabs = ({ items }) => {
 
   return (
     <ul className={styles.tabs}>
-      {items.map((item) => {
-        const tabTrigger = cx({
-          tabTrigger: true,
-          tabTriggerActive: currentTab === item.id,
-        });
-
-        return (
-          <li className={styles.tab} key={item.id}>
-            <button
-              className={tabTrigger}
-              onClick={() => {
-                setCurrentTab(item.id);
-                item.onClick();
-              }}
-              type="button"
-            >
-              {item.label}
-            </button>
-          </li>
-        );
-      })}
+      {items.map((item) => (
+        <li className={styles.tab} key={item.id}>
+          <button
+            className={cx({
+              tabTrigger: true,
+              tabTriggerActive: currentTab === item.id,
+            })}
+            onClick={() => {
+              setCurrentTab(item.id);
+              item.onClick();
+            }}
+            type="button"
+          >
+            {item.label}
+          </button>
+        </li>
+      ))}
     </ul>
   );
 };

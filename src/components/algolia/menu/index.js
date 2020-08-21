@@ -25,11 +25,6 @@ const Menu = ({
     return () => document.removeEventListener('click', bodyClick);
   }, []);
 
-  const filterDropdown = cx({
-    filterDropdown: true,
-    filterDropdownVisible: visibility,
-  });
-
   return (
     <div className={styles.filter} ref={filter}>
       <button
@@ -45,7 +40,11 @@ const Menu = ({
         </span>
         <Select className={styles.filterButtonIcon} />
       </button>
-      <ul className={filterDropdown}>
+      <ul className={cx({
+        filterDropdown: true,
+        filterDropdownVisible: visibility,
+      })}
+      >
         {items.map((item) => {
           const isActive = currentRefinement === item.label;
 

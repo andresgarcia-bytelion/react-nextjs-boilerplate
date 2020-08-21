@@ -18,27 +18,13 @@ const Accordion = ({ actions, children, title }) => {
     }
   });
 
-  const accordionTrigger = cx({
-    accordionTrigger: true,
-    accordionTriggerActive: active,
-  });
-  const accordionTriggerIcon = cx({
-    accordionTriggerIcon: true,
-    accordionTriggerIconActive: active,
-  });
-  const accordionBody = cx({
-    accordionBody: true,
-    accordionBodyActive: active,
-  });
-  const accordionContent = cx({
-    accordionContent: true,
-    accordionContentActive: active,
-  });
-
   return (
     <div className={styles.accordion}>
       <button
-        className={accordionTrigger}
+        className={cx({
+          accordionTrigger: true,
+          accordionTriggerActive: active,
+        })}
         type="button"
         onClick={() => {
           setActive((prevState) => !prevState);
@@ -46,15 +32,28 @@ const Accordion = ({ actions, children, title }) => {
       >
         <h2 className={styles.accordionTriggerTitle}>{title}</h2>
         {actions && <span className={styles.accordionTriggerActions} />}
-        <ChevronDown className={accordionTriggerIcon} />
+        <ChevronDown className={cx({
+          accordionTriggerIcon: true,
+          accordionTriggerIconActive: active,
+        })}
+        />
       </button>
       <div
-        className={accordionBody}
+        className={cx({
+          accordionBody: true,
+          accordionBodyActive: active,
+        })}
         style={{
           height: active ? height : 0,
         }}
       >
-        <div className={accordionContent} ref={accordionContentRef}>
+        <div
+          className={cx({
+            accordionContent: true,
+            accordionContentActive: active,
+          })}
+          ref={accordionContentRef}
+        >
           {children}
         </div>
       </div>

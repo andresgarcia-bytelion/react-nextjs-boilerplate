@@ -8,11 +8,6 @@ const cx = classNames.bind(styles);
 const Menus = ({ children }) => {
   const [visibility, setVisibility] = useState(false);
 
-  const filtersBody = cx({
-    filtersBody: true,
-    filtersBodyVisible: visibility,
-  });
-
   return (
     <div className={styles.filters}>
       <div className={styles.filtersTrigger}>
@@ -25,7 +20,14 @@ const Menus = ({ children }) => {
           }}
         />
       </div>
-      <div className={filtersBody}>{children}</div>
+      <div
+        className={cx({
+          filtersBody: true,
+          filtersBodyVisible: visibility,
+        })}
+      >
+        {children}
+      </div>
     </div>
   );
 };

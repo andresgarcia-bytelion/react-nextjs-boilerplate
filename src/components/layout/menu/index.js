@@ -13,11 +13,6 @@ const Menu = () => {
 
   OnClickOutside(pageMenuWrapperRef, () => setMenuOpen(false));
 
-  const pageMenu = cx({
-    pageMenu: true,
-    pageMenuOpen: menuOpen,
-  });
-
   return (
     <div className={styles.pageMenuWrapper} ref={pageMenuWrapperRef}>
       <MenuButton
@@ -25,7 +20,11 @@ const Menu = () => {
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
       />
-      <div className={pageMenu}>
+      <div className={cx({
+        pageMenu: true,
+        pageMenuOpen: menuOpen,
+      })}
+      >
         <Nav
           title="Main Menu"
           items={[

@@ -9,11 +9,6 @@ const cx = classNames.bind(styles);
 const Toast = ({
   icon, label, setVisible, visible,
 }) => {
-  const toast = cx({
-    toast: true,
-    toastVisible: visible,
-  });
-
   useEffect(() => {
     if (visible) {
       const timer = setTimeout(() => {
@@ -25,7 +20,11 @@ const Toast = ({
   }, [visible]);
 
   return (
-    <div className={toast}>
+    <div className={cx({
+      toast: true,
+      toastVisible: visible,
+    })}
+    >
       {icon && <span className={styles.toastIcon}>{icon}</span>}
       <span className={styles.toastLabel}>{label}</span>
       <button

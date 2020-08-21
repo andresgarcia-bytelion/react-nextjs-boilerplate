@@ -12,11 +12,6 @@ const UserBubble = ({ items }) => {
   const [session] = useSession();
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
-  const userBubbleButtonIcon = cx({
-    userBubbleButtonIcon: true,
-    userBubbleButtonIconActive: dropdownVisible,
-  });
-
   return (
     <>
       { session && (
@@ -35,7 +30,11 @@ const UserBubble = ({ items }) => {
               }}
             >
               <span className={styles.userBubbleButtonLabel}>{session.user.name}</span>
-              <ChevronDown className={userBubbleButtonIcon} />
+              <ChevronDown className={cx({
+                userBubbleButtonIcon: true,
+                userBubbleButtonIconActive: dropdownVisible,
+              })}
+              />
             </button>
             <Dropdown
               items={items}

@@ -1,11 +1,12 @@
 import React from 'react';
 import Menu from 'components/layout/menu';
+import Logo from 'components/logo';
 import styles from './styles.module.scss';
 
 const Header = () => (
   <header className={styles.pageHeader}>
     <div className={styles.pageHeaderInner}>
-      <h1>Header</h1>
+      <Logo />
       <Menu />
     </div>
   </header>
