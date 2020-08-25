@@ -13,6 +13,4 @@ const Logo = () => (
   </div>
 );
 
-Logo.propTypes = {};
-
 export default Logo;
