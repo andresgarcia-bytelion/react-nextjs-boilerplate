@@ -1,4 +1,4 @@
-@import '../../styles';
+@import 'styles';
 
 .button {
   align-items: center;
@@ -9,6 +9,8 @@
   transition:
     background $speed,
     color $speed;
+
+  &Default {}
 
   &:hover,
   &:focus {}

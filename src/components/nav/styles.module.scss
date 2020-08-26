@@ -1,4 +1,4 @@
-@import '../../styles';
+@import 'styles';
 
 .nav {}
 
@@ -13,7 +13,12 @@
 .navItem {}
 
 .navLink {
+  color: inherit;
+  display: block;
   text-decoration: none;
+
+  &:hover:not(.navLinkActive),
+  &:focus:not(.navLinkActive) {}
 
   &Active {
     background: rgba(#000, .15);

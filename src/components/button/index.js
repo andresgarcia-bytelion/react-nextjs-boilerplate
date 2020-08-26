@@ -34,7 +34,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   icon: '',
-  theme: 'default',
+  theme: 'Default',
   type: 'button',
   disabled: false,
   onClick: () => {},

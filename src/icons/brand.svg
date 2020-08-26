@@ -1,36 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 52 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Brand</title>
     <defs>
-        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="100%" gradientTransform="translate(0.500000,0.000000),scale(0.900000,1.000000),rotate(90.000000),translate(-0.500000,-0.000000)" id="radialGradient-1">
-            <stop stop-color="#A0F0E9" offset="0%"></stop>
-            <stop stop-color="#FFDCEB" offset="100%"></stop>
+        <radialGradient cx="7.36094647%" cy="6.35869279%" fx="7.36094647%" fy="6.35869279%" r="139.724783%" id="brandGradient">
+            <stop stop-color="#9BE4FF" offset="0%"></stop>
+            <stop stop-color="#B9FFCA" offset="57.3481206%"></stop>
+            <stop stop-color="#FFB9EB" offset="94.3427666%"></stop>
         </radialGradient>
-        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="100%" gradientTransform="translate(0.500000,0.000000),scale(0.900000,1.000000),rotate(90.000000),translate(-0.500000,-0.000000)" id="radialGradient-2">
-            <stop stop-color="#F88EFF" offset="0%"></stop>
-            <stop stop-color="#9FFFE8" offset="100%"></stop>
-        </radialGradient>
-        <polygon id="path-3" points="187.144846 172.700787 227.144846 208.700787 187.144846 208.700787 227.144846 172.700787 207.104387 203.120197"></polygon>
-        <filter x="-23.8%" y="-22.2%" width="147.7%" height="148.5%" filterUnits="objectBoundingBox" id="filter-4">
-            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
-            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
-            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.636070884   0 0 0 0 0.636070884  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
-        </filter>
-        <filter x="-21.3%" y="-19.4%" width="142.7%" height="143.0%" filterUnits="objectBoundingBox" id="filter-5">
-            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
-            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
-            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
-            <feColorMatrix values="0 0 0 0 0.758115477   0 0 0 0 0.599904726   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
-        </filter>
     </defs>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g transform="translate(-181.000000, -168.000000)">
-            <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
-            <use fill="url(#radialGradient-1)" fill-rule="evenodd" xlink:href="#path-3"></use>
-            <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-3"></use>
-            <use stroke="url(#radialGradient-2)" stroke-width="1" xlink:href="#path-3"></use>
+        <g transform="translate(-190.000000, -186.000000)" fill="url(#brandGradient)">
+            <rect x="190" y="186" width="60" height="60"></rect>
         </g>
     </g>
 </svg>
