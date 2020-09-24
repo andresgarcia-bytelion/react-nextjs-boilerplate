@@ -39,7 +39,7 @@ npm run custom
 
 All environment variables are available to use through `process.env`. Any custom environment variables can go directly in the `env: {}` object within `next.config.js`.
 
-## Auth0
+## Auth0 Authentication
 
 Authentication is managed through the [https://github.com/auth0/nextjs-auth0](nextjs-auth0) library which follows the [https://auth0.com/blog/ultimate-guide-nextjs-authentication-auth0/](best practices) outlined by the Auth0 team.
 
