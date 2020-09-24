@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint . --ext .js --fix"
   },
+  "license": "MIT",
   "dependencies": {
     "@auth0/nextjs-auth0": "^0.16.0",
     "@welldone-software/why-did-you-render": "^4.3.2",
