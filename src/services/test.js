@@ -1,4 +1,4 @@
-import useApi from 'lib/use-api';
+import useApi from '@/lib/use-api';
 import { PUT } from './index';
 
 const root = '/api/questions';

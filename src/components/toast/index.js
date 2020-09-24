@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Close from 'icons/close.svg';
+import Close from '@/icons/close.svg';
 import styles from './styles.module.scss';
 
 const cx = classNames.bind(styles);

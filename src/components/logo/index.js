@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Brand from 'icons/brand.svg';
+import Brand from '@/icons/brand.svg';
 import styles from './styles.module.scss';
 
 const Logo = () => (

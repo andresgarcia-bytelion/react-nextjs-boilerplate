@@ -1,5 +1,5 @@
 import React from 'react';
-import FormPage from 'components/forms/page';
+import FormPage from '@/components/forms/page';
 
 const Page2 = ({ formStep, setFormStep }) => (
   <FormPage
