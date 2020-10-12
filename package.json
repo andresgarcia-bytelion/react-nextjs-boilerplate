@@ -8,25 +8,26 @@
     "start": "next start",
     "lint": "eslint . --ext .js --fix"
   },
-  "license": "MIT",
+  "license": "Unlicensed",
   "dependencies": {
     "@auth0/nextjs-auth0": "^0.16.0",
     "@welldone-software/why-did-you-render": "^4.3.2",
+    "algoliasearch": "^4.5.1",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
-    "eslint": "7.9.0",
+    "eslint": "7.11.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-import-resolver-alias": "^1.1.2",
-    "eslint-plugin-cypress": "^2.11.1",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-no-secrets": "^0.6.8",
-    "eslint-plugin-react": "^7.21.1",
+    "eslint-plugin-react": "^7.21.4",
     "eslint-plugin-react-hooks": "4.1.2",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-simple-import-sort": "^5.0.3",
-    "isomorphic-unfetch": "^3.0.0",
-    "moment": "^2.29.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "moment": "^2.29.1",
     "next": "latest",
     "next-compose-plugins": "^2.2.0",
     "next-svgr": "0.0.2",
@@ -34,6 +35,12 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "uuid": "^8.3.0"
+    "react-instantsearch-dom": "^6.7.0",
+    "uuid": "^8.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }

@@ -1,0 +1,37 @@
+@import 'styles';
+
+.sortBy {
+  padding: 0 20px 0 0;
+}
+
+.sortBySorter {
+  width: 100%;
+
+	color: #888;
+	display: flex;
+	padding: 12px 0 6px;
+
+	&Button {
+		align-items: center;
+		background: none;
+		border: 0;
+		cursor: pointer;
+		transition: color $speed;
+
+		&:hover,
+		&:focus {
+			color: $accent;
+		}
+	}
+}
+
+.sortByLabel {
+  @include h6;
+}
+
+.sortByIcon {
+  position: relative;
+  top: -1px;
+
+  margin-left: 6px;
+}

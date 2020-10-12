@@ -1,3 +1,4 @@
+/* Nextjs Auth0 File */
 /**
  * Manage Auth0 session
  * Disable triggering ESLint rules for a vendor-only file
@@ -13,7 +14,7 @@ import React, { Component } from 'react';
 import auth0 from '@/lib/auth0';
 import { fetchUser } from '@/lib/user';
 import createLoginUrl from '@/lib/url-helper';
-import RedirectToLogin from './login-redirect';
+import RedirectToLogin from '@/components/auth/login-redirect';
 
 export default function withAuth(InnerComponent) {
   return class Authenticated extends Component {
@@ -34,12 +35,15 @@ export default function withAuth(InnerComponent) {
           ctx.res.end();
         }
 
+        let currentTime = new Date();
+        currentTime = currentTime.getTime();
+
         return {
           session: {
             user: {
               name: 'Exception',
             },
-            createdAt: 1592859746557,
+            createdAt: currentTime,
           },
         };
       }

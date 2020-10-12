@@ -1,0 +1,10 @@
+@import 'styles';
+
+.sortBysBody {
+
+  @media #{$max_xl} {
+    display: none;
+  }
+}
+
+.sortBys {}

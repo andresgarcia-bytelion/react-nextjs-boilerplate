@@ -1,19 +1,21 @@
+/* Nextjs Auth0 File */
+
+import React, { useEffect } from 'react';
 import Router from 'next/router';
-import React, { Component } from 'react';
 
 import Layout from '@/components/layout';
 import createLoginUrl from '@/lib/url-helper';
 
-export default class RedirectToLogin extends Component {
-  componentDidMount() {
+const RedirectToLogin = () => {
+  useEffect(() => {
     window.location.assign(createLoginUrl(Router.pathname));
-  }
+  }, []);
 
-  render() {
-    return (
-      <Layout>
-        <>Signing you in...</>
-      </Layout>
-    );
-  }
-}
+  return (
+    <Layout>
+      <>Signing you in...</>
+    </Layout>
+  );
+};
+
+export default RedirectToLogin;

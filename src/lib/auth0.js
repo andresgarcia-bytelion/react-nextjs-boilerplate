@@ -1,3 +1,5 @@
+/* Nextjs Auth0 File */
+
 import { initAuth0 } from '@auth0/nextjs-auth0';
 
 // Env variables are set in ./next.config.js

@@ -49,6 +49,22 @@ Authentication is managed through the [https://github.com/auth0/nextjs-auth0](ne
 ### Secured API Flow
 ![secure api web sequence diagram](https://cdn.auth0.com/blog/nextjs-authn-auth0/static-site-api-calls.png)
 
+## Algolia
+
+Algolia components are included by default. `/src/pages/algolia.js` was created as an initial playground for styling and testing components (**though inoperable until a new algolia id, key, and index are entered**). To inject your own Algolia settings you'll need to edit the following variables in `next.config.js`:
+
+* `algoliaId`: API Keys >> Algolia _Application ID_,
+* `algoliaKey`: API Keys >> Algolia _Search-Only API Key_,
+* `algoliaIndex`: Indices >> Name of the Algolia index you wish to search
+
+### Customizing Hits Per Page
+
+Set the `<Configure>` component within `/src/algolia/instant-search` to something other than the default of *10*
+
+### Sort By Placeholder
+
+The Sort By component helps sort hits given a replica index. But in some designs not all attributes are sortable. In this case the Sort By Placeholder was created to mimic the look of a Sort By component without the functionality.
+
 ## Optional Hygen Scaffolding
 
 [Hygen](https://www.hygen.io/templates/) provides a quick and easy way to scaffold components into your webapp without the manual digging. The following Hygen cli commands are currently available:

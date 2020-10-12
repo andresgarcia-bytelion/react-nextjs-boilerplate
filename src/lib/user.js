@@ -1,3 +1,4 @@
+/* Nextjs Auth0 File */
 /**
  * Disable triggering ESLint rules for a vendor-only file
  * TO-DO: bring this file up to project code standards
@@ -55,17 +56,11 @@ export const useFetchUser = () => {
       // Only set the user if the component is still mounted
       if (isMounted) {
         if (user) {
-          // The namespace specified is required by the Auth0 configured rules hook
-          user.roles = user[
-            'http://schemas.microsoft.com/ws/2008/06/identity/claims/role/role'
-          ];
-
           setUser({ user, loading: false });
         } else {
           setUser({
             user: {
-              name: 'Vercel',
-              roles: [],
+              name: 'Exception',
             },
             loading: false,
           });
