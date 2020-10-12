@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import classNames from 'classnames/bind';
-import OnClickOutside from 'hooks/on-click-outside';
-import MenuButton from 'components/menu-button';
-import Nav from 'components/nav';
+import OnClickOutside from '@/hooks/on-click-outside';
+import MenuButton from '@/components/menu-button';
+import Nav from '@/components/nav';
 import styles from './styles.module.scss';
 
 const cx = classNames.bind(styles);
@@ -31,14 +31,6 @@ const Menu = () => {
             {
               href: '/',
               label: 'Home',
-            },
-            {
-              href: '/components',
-              label: 'Components',
-            },
-            {
-              href: '/algolia',
-              label: 'Algolia',
             },
           ]}
         />

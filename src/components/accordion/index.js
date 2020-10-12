@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import OnResize from 'hooks/on-resize';
-import ChevronDown from 'icons/chevron-down.svg';
+import OnResize from '@/hooks/on-resize';
+import ChevronDown from '@/icons/chevron-down.svg';
 import styles from './styles.module.scss';
 
 const cx = classNames.bind(styles);

@@ -1,6 +1,6 @@
 import React from 'react';
-import Menu from 'components/layout/menu';
-import Logo from 'components/logo';
+import Menu from '@/components/layout/menu';
+import Logo from '@/components/logo';
 import styles from './styles.module.scss';
 
 const Header = () => (

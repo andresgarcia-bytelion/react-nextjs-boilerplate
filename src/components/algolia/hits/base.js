@@ -1,4 +1,4 @@
-import { formatDate } from 'hooks/dates';
+import { formatDate } from '@/hooks/dates';
 
 const Base = (hit) => [
   {

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Field from 'components/forms/field';
+import Field from '@/components/forms/field';
 import styles from './styles.module.scss';
 
 const Input = ({
