@@ -6,7 +6,7 @@
     "custom": "next -p 8080",
     "build": "next build",
     "start": "next start",
-    "generate": "prisma generate",
+    "migrate": "prisma generate && prisma migrate save --experimental && prisma migrate up --experimental",
     "lint": "eslint . --ext .js --fix"
   },
   "license": "Unlicensed",
