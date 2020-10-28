@@ -73,3 +73,23 @@ The Sort By component helps sort hits given a replica index. But in some designs
 hygen component --name creative-name new
 hygen page --name about new
 ```
+
+## Prisma
+
+https://www.prisma.io/docs/
+
+### Using PostgreSQL
+
+* Set `DATABASE_URL` environment variable with a `postgresql://` URL ([Related Prisma docs](https://www.prisma.io/docs/reference/database-connectors/postgresql))
+
+### Making schema/database changes
+
+After changing the schema file...
+
+https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-migrate
+
+* Manually set the `DATABASE_URL` environment variable in your terminal
+* Run `npm run migrate` - this executes the following commands for you:
+  * `npx prisma generate` to generate the latest Prisma client
+  * `npx prisma migrate save --experimental` to create the migration files
+  * `npx prisma migrate up --experimental` to apply the migration to your database
