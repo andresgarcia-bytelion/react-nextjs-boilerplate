@@ -1,27 +1,42 @@
-/* eslint-disable react/jsx-props-no-spreading */
-
 import React from 'react';
-import App from 'next/app';
+import Head from 'next/head';
 import whyDidYouRender from '@welldone-software/why-did-you-render';
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import theme from '@/lib/theme';
 import AppContextProvider from '@/contexts/index';
-
-import '@/styles/normalize.scss';
-import '@/styles/global.scss';
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
   whyDidYouRender(React);
 }
 
-class ReturnApp extends App {
-  render() {
-    const { Component, pageProps } = this.props;
+const MyApp = (props) => {
+  const { Component, pageProps } = props;
 
-    return (
-      <AppContextProvider>
-        <Component {...pageProps} />
-      </AppContextProvider>
-    );
-  }
-}
+  React.useEffect(() => {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
+    }
+  }, []);
 
-export default ReturnApp;
+  return (
+    <>
+      <Head>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <AppContextProvider>
+          <Component {...pageProps} />
+        </AppContextProvider>
+      </ThemeProvider>
+    </>
+  );
+};
+
+export default MyApp;

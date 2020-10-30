@@ -8,7 +8,7 @@
       "@/icons/*": ["icons/*"],
       "@/lib/*": ["lib/*"],
       "@/services/*": ["services/*"],
-      "@/styles/*": ["styles/*"]
+      "@/styles/*": ["archive/styles/*"]
     }
   }
 }

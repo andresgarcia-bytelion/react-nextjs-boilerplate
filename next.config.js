@@ -10,7 +10,7 @@ const withSvgr = require('next-svgr');
 const gitBranchCircle = process.env.CIRCLE_BRANCH;
 const gitBranchVercel = process.env.VERCEL_GITHUB_COMMIT_REF;
 const gitBranch = gitBranchCircle || gitBranchVercel;
-const site = 'react-nextjs-boilerplate';
+const site = 'nextjs-boilerplate';
 let baseDomain;
 let bypassLogin;
 

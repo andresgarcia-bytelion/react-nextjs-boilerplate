@@ -1,35 +1,75 @@
 import React from 'react';
-import Head from 'next/head';
-import PropTypes from 'prop-types';
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
-import styles from './styles.module.scss';
+import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Hidden from '@material-ui/core/Hidden';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Ribbon from '@/components/layout/ribbon';
+import Menu from '@/components/layout/menu';
+import theme from '@/lib/theme';
 
-const site = {
-  title: 'React Boilerplate',
-  description: 'A react boilerplate made from corgis',
+const pageGridStyles = makeStyles({
+  root: {
+    height: '100%',
+    paddingTop: 57,
+    [theme.breakpoints.up('md')]: {
+      paddingTop: 65,
+    },
+  },
+});
+
+const asidePaperStyles = makeStyles({
+  root: {
+    height: '100%',
+    borderRadius: 0,
+    borderRight: `1px solid ${theme.palette.grays.light}`,
+  },
+});
+
+const mainBoxStyles = makeStyles({
+  root: {
+    padding: theme.spacing(2, 1),
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(4),
+    },
+  },
+});
+
+const Layout = ({ children }) => {
+  const pageGridClasses = pageGridStyles();
+  const asidePaperClasses = asidePaperStyles();
+  const mainBoxClasses = mainBoxStyles();
+
+  return (
+    <>
+      <Ribbon />
+      <Grid
+        alignItems="stretch"
+        container
+        className={pageGridClasses.root}
+        direction="row"
+      >
+        <Grid item>
+          <Hidden mdDown>
+            <Paper
+              className={asidePaperClasses.root}
+              elevation={0}
+            >
+              <Menu />
+            </Paper>
+          </Hidden>
+        </Grid>
+        <Grid item xs>
+          <Container disableGutters maxWidth="xl">
+            <Box className={mainBoxClasses.root}>
+              {children}
+            </Box>
+          </Container>
+        </Grid>
+      </Grid>
+    </>
+  );
 };
 
-const Layout = ({ title, children }) => (
-  <div className={styles.page}>
-    <Head>
-      <title>{`${site.title} | ${title}`}</title>
-      <meta
-        name="description"
-        content={site.description}
-      />
-    </Head>
-    <Header />
-    <main className={styles.pageMain}>
-      <div className={styles.pageMainInner}>{children}</div>
-    </main>
-    <Footer />
-  </div>
-);
-
-Layout.propTypes = {
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-};
-
-export default React.memo(Layout);
+export default Layout;

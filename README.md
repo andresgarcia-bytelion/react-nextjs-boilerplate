@@ -1,82 +1,54 @@
-# Bytelion React Nextjs Boilerplate
+# Bytelion's Nextjs Boilerplate
 
-This boilerplate is built with [React](https://reactjs.org/) + [Nextjs](https://nextjs.org/) and is meant to serve as a concrete starting point for any webapp.
+* [Nextjs](https://nextjs.org/): React framework for hybrid static & server rendering
+* [React](https://reactjs.org/): JavaScript library for building user interfaces
+* [Prisma](https://www.prisma.io/): Open-source database toolkit with an auto-generated query builder
+* [Auth0](https://github.com/auth0/nextjs-auth0): Authentication service with nextjs support
+* [Material UI](https://material-ui.com/): Standardized React component library
+
+
 
 ## Getting Started
 
-Once you've downloaded this repo into your project, dive into your project's terminal and enter the following:
+Once you've downloaded this repo into your project folder, dive into your project's terminal and enter the following:
 
 ```
-npm install
+yarn install
+vercel env pull
 npm run dev
 ```
 
-### Run Concurrently
+Afterwards your project will begin running on `http://localhost:3000`.
 
-Sometimes you'll be running two project at once. Since the port is fixed to 3000 there is a separate script to run on port 8080:
 
-```
-npm run custom
-```
 
 ## Project Structure
 
-* `/src/`:
-  * `components`: generic components pertaining to most projects, includes default algolia components
-  * `contexts`: page persistent context provider
-  * `hooks`: useful functions to use within react
-  * `icons`: svg icons that can be integrated into react
-  * `lib`: vendor files
-  * `pages`: any js file here will be automatically connected to a nextjs route
-  * `services`: main facility for managing api calls on the front end
-  * `styles`: contains generic global styles, useful mixins, typographic base, and project variables
+* `components`: All custom components to use within pages
+* `contexts`: [Context Providers](https://reactjs.org/docs/context.html) for passing data throughout the app
+* `hooks`: Repeatedly used helper functions
+* `icons`: SVGs availabled through [next-svgr](https://www.npmjs.com/package/next-svgr)
+* `lib`: Vendor files
+* `pages`: Automatically routed pages within the app
+* `services`: API helper functions
 
-* `.editorconfig`: will automatically structure indentation if you have the editorconfig plugin
-* `.eslintrc`: main linting configuration
-* `next.config.js`: contains environment variables and plugin configurations for nextjs
 
-## Environment Variables
 
-All environment variables are available to use through `process.env`. Any custom environment variables can go directly in the `env: {}` object within `next.config.js`.
+## Nextjs
 
-## Auth0 Authentication
+* [Docs](https://nextjs.org/docs/getting-started)
 
-Authentication is managed through the [https://github.com/auth0/nextjs-auth0](nextjs-auth0) library which follows the [https://auth0.com/blog/ultimate-guide-nextjs-authentication-auth0/](best practices) outlined by the Auth0 team.
 
-### withAuth Flow
-![withAuth web sequence diagram](https://cdn.auth0.com/blog/nextjs-authn-auth0/static-site-authentication.png)
 
-### Secured API Flow
-![secure api web sequence diagram](https://cdn.auth0.com/blog/nextjs-authn-auth0/static-site-api-calls.png)
+## React
 
-## Algolia
+* [Docs](https://reactjs.org/docs/getting-started.html)
 
-Algolia components are included by default. `/src/pages/algolia.js` was created as an initial playground for styling and testing components (**though inoperable until a new algolia id, key, and index are entered**). To inject your own Algolia settings you'll need to edit the following variables in `next.config.js`:
 
-* `algoliaId`: API Keys >> Algolia _Application ID_,
-* `algoliaKey`: API Keys >> Algolia _Search-Only API Key_,
-* `algoliaIndex`: Indices >> Name of the Algolia index you wish to search
-
-### Customizing Hits Per Page
-
-Set the `<Configure>` component within `/src/algolia/instant-search` to something other than the default of *10*
-
-### Sort By Placeholder
-
-The Sort By component helps sort hits given a replica index. But in some designs not all attributes are sortable. In this case the Sort By Placeholder was created to mimic the look of a Sort By component without the functionality.
-
-## Optional Hygen Scaffolding
-
-[Hygen](https://www.hygen.io/templates/) provides a quick and easy way to scaffold components into your webapp without the manual digging. The following Hygen cli commands are currently available:
-
-```
-hygen component --name creative-name new
-hygen page --name about new
-```
 
 ## Prisma
 
-https://www.prisma.io/docs/
+* [Docs](https://www.prisma.io/docs/)
 
 ### Using PostgreSQL
 
@@ -93,3 +65,36 @@ https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-migrate
   * `npx prisma generate` to generate the latest Prisma client
   * `npx prisma migrate save --experimental` to create the migration files
   * `npx prisma migrate up --experimental` to apply the migration to your database
+
+
+
+## Auth0 Authentication
+
+Authentication is managed through the [nextjs-auth0](https://github.com/auth0/nextjs-auth0) library which follows the [best practices](https://auth0.com/blog/ultimate-guide-nextjs-authentication-auth0/) outlined by the Auth0 team.
+
+### withAuth Flow
+![withAuth web sequence diagram](https://cdn.auth0.com/blog/nextjs-authn-auth0/static-site-authentication.png)
+
+### Secured API Flow
+![secure api web sequence diagram](https://cdn.auth0.com/blog/nextjs-authn-auth0/static-site-api-calls.png)
+
+
+
+## Algolia
+
+To add your own Algolia settings you'll need to edit the following variables in your Vercel project's settings and add them to `next.config.js`:
+
+* `algoliaId`: API Keys >> Algolia _Application ID_,
+* `algoliaKey`: API Keys >> Algolia _Search-Only API Key_,
+* `algoliaIndex`: Indices >> Name of the Algolia index you wish to search
+
+
+
+## Optional Hygen Scaffolding
+
+[Hygen](https://www.hygen.io/templates/) provides a quick and easy way to scaffold components into your webapp without the manual digging. The following Hygen cli commands are currently available:
+
+```
+hygen component --name creative-name new
+hygen page --name about new
+```
