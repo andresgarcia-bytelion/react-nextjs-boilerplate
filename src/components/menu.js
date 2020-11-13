@@ -1,25 +1,28 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Nav from '@/components/nav';
+import theme from '@/lib/theme';
 
-const useStyles = makeStyles({
+const menuStyles = makeStyles({
   root: {
     height: '100%',
     width: 300,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
+    padding: theme.spacing(2, 0)
   },
 });
 
 const Menu = () => {
-  const classes = useStyles();
+  const menuClasses = menuStyles();
 
   return (
-    <Box
-      className={classes.root}
+    <Grid
+      className={menuClasses.root}
+      container
+      direction="column"
+      justify="space-between"
       py={2}
     >
       <Nav
@@ -35,7 +38,7 @@ const Menu = () => {
           {`© ${new Date().getFullYear()} Bytelion. Copyright.`}
         </Typography>
       </Box>
-    </Box>
+    </Grid>
   );
 };
 

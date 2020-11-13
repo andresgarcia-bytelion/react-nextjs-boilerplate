@@ -1,6 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import NextLink from 'next/link';
+import { makeStyles } from '@material-ui/core/styles';
 import MuiLink from '@material-ui/core/Link';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import Brand from '@/icons/brand.svg';
@@ -15,10 +15,11 @@ const svgIconStyles = makeStyles({
 
 const CustomLogo = () => {
   const svgIconClasses = svgIconStyles();
+  const link = '/';
 
   return (
-    <NextLink href="/">
-      <MuiLink>
+    <NextLink href={link}>
+      <MuiLink href={link}>
         <SvgIcon
           className={svgIconClasses.root}
           component={Brand}

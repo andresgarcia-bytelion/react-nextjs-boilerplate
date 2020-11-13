@@ -1,12 +1,13 @@
 import React from 'react';
+import Head from 'next/head';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Ribbon from '@/components/layout/ribbon';
-import Menu from '@/components/layout/menu';
+import Ribbon from '@/components/ribbon';
+import Menu from '@/components/menu';
 import theme from '@/lib/theme';
 
 const pageGridStyles = makeStyles({
@@ -14,7 +15,7 @@ const pageGridStyles = makeStyles({
     height: '100%',
     paddingTop: 57,
     [theme.breakpoints.up('md')]: {
-      paddingTop: 65,
+      paddingTop: 63,
     },
   },
 });
@@ -29,20 +30,24 @@ const asidePaperStyles = makeStyles({
 
 const mainBoxStyles = makeStyles({
   root: {
-    padding: theme.spacing(2, 1),
+    padding: theme.spacing(2),
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(4),
     },
   },
 });
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title }) => {
   const pageGridClasses = pageGridStyles();
   const asidePaperClasses = asidePaperStyles();
   const mainBoxClasses = mainBoxStyles();
 
   return (
     <>
+      <Head>
+        <title>{title}</title>
+        <meta property="og:title" content={title} key="title" />
+      </Head>
       <Ribbon />
       <Grid
         alignItems="stretch"
@@ -60,7 +65,7 @@ const Layout = ({ children }) => {
             </Paper>
           </Hidden>
         </Grid>
-        <Grid item xs>
+        <Grid item>
           <Container disableGutters maxWidth="xl">
             <Box className={mainBoxClasses.root}>
               {children}

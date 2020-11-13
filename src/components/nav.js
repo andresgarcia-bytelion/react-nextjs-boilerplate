@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -20,7 +19,7 @@ const listItemStyles = makeStyles({
 
 const listItemTextStyles = makeStyles({
   root: {
-    margin: 0,
+    margin: theme.spacing(0, 2)
   },
 });
 
@@ -48,15 +47,13 @@ const CustomNav = ({ id, items }) => {
               disableGutters
               href={item.href}
             >
-              <Box px={2}>
-                <ListItemText
-                  className={listItemTextClasses.root}
-                  primary={item.primary}
-                  primaryTypographyProps={{
-                    variant: 'body2',
-                  }}
-                />
-              </Box>
+              <ListItemText
+                className={listItemTextClasses.root}
+                primary={item.primary}
+                primaryTypographyProps={{
+                  variant: 'body2',
+                }}
+              />
             </ListItem>
           </Link>
         );

@@ -1,5 +1,8 @@
 import React, {
-  createContext, useContext, useState, useEffect,
+  createContext,
+  useContext,
+  useState,
+  useEffect,
 } from 'react';
 import PropTypes from 'prop-types';
 import { useFetchUser } from '@/lib/user';

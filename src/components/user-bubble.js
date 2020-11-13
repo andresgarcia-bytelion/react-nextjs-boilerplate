@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { useAppContext } from '@/contexts/index';
-import Dropdown from '@/components/dropdown';
-import MuiLink from '@/components/link';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import theme from '@/lib/theme';
 import Skeleton from '@material-ui/lab/Skeleton';
+import Dropdown from '@/components/dropdown';
+import MuiLink from '@/components/link';
+import theme from '@/lib/theme';
 
 const buttonStyles = makeStyles({
   root: {

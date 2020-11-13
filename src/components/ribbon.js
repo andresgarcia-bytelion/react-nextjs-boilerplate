@@ -7,8 +7,8 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
-import Menu from '@/components/layout/menu';
 import Logo from '@/components/logo';
+import Menu from '@/components/menu';
 import UserBubble from '@/components/user-bubble';
 import theme from '@/lib/theme';
 
