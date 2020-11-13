@@ -14,7 +14,7 @@ import React, { Component } from 'react';
 import auth0 from '@/lib/auth0';
 import { fetchUser } from '@/lib/user';
 import createLoginUrl from '@/lib/url-helper';
-import RedirectToLogin from 'auth/login-redirect';
+import RedirectToLogin from '@/auth/login-redirect';
 
 export default function withAuth(InnerComponent) {
   return class Authenticated extends Component {

@@ -6,7 +6,7 @@ import theme from '@/lib/theme';
 const menuStyles = makeStyles({
   paper: {
     border: `1px solid ${theme.palette.grays.default}`,
-    borderRadius: 0
+    borderRadius: 0,
   },
   list: {
     padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,

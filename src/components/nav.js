@@ -19,7 +19,7 @@ const listItemStyles = makeStyles({
 
 const listItemTextStyles = makeStyles({
   root: {
-    margin: theme.spacing(0, 2)
+    margin: theme.spacing(0, 2),
   },
 });
 

@@ -36,13 +36,13 @@
     "import/resolver": {
       "alias": {
         "map": [
+          ["@/auth", "./src/auth"],
           ["@/components", "./src/components"],
           ["@/contexts", "./src/contexts"],
           ["@/hooks", "./src/hooks"],
           ["@/icons", "./src/icons"],
           ["@/lib", "./src/lib"],
-          ["@/services", "./src/services"],
-          ["@/styles", "./src/styles"]
+          ["@/services", "./src/services"]
         ],
         "extensions": [".ts", ".js", ".jsx", ".json"]
       }

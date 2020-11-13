@@ -10,7 +10,7 @@ const menuStyles = makeStyles({
   root: {
     height: '100%',
     width: 300,
-    padding: theme.spacing(2, 0)
+    padding: theme.spacing(2, 0),
   },
 });
 
