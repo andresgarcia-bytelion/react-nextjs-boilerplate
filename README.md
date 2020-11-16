@@ -1,10 +1,10 @@
 # Bytelion's Nextjs Boilerplate
 
-* [Nextjs](https://nextjs.org/): React framework for hybrid static & server rendering
-* [React](https://reactjs.org/): JavaScript library for building user interfaces
-* [Prisma](https://www.prisma.io/): Open-source database toolkit with an auto-generated query builder
+* [Nextjs](https://nextjs.org/) [(Docs)](https://nextjs.org/docs/getting-started): React framework for hybrid static & server rendering
+* [React](https://reactjs.org/) [(Docs)](https://reactjs.org/docs/getting-started.html): JavaScript library for building user interfaces
+* [Prisma](https://www.prisma.io/) [(Docs)](https://www.prisma.io/docs/): Open-source database toolkit with an auto-generated query builder
+* [Material UI](https://material-ui.com/) [(Docs)](https://material-ui.com/getting-started/installation/): Standardized React component library
 * [Auth0](https://github.com/auth0/nextjs-auth0): Authentication service with nextjs support
-* [Material UI](https://material-ui.com/): Standardized React component library
 
 
 
@@ -32,29 +32,14 @@ Afterwards your project will begin running on `http://localhost:3000`.
 * `icons`: SVGs availabled through [next-svgr](https://www.npmjs.com/package/next-svgr)
 * `lib`: Vendor files
 * `pages`: Automatically routed pages within the app
-* `services`: API helper functions
-
-
-
-## Nextjs
-
-* [Docs](https://nextjs.org/docs/getting-started)
-
-
-
-## React
-
-* [Docs](https://reactjs.org/docs/getting-started.html)
 
 
 
 ## Prisma
 
-* [Docs](https://www.prisma.io/docs/)
-
 ### Prisma Studio
 
-Prisma comes bundled with an IDE to edit the database. Just open up your terminal and enter the following:
+Prisma comes bundled with an admin ui to edit the database. Just open up your terminal and enter the following:
 
 ```
 npx prisma studio

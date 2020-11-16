@@ -42,8 +42,7 @@
           ["@/data", "./src/data"],
           ["@/hooks", "./src/hooks"],
           ["@/icons", "./src/icons"],
-          ["@/lib", "./src/lib"],
-          ["@/services", "./src/services"]
+          ["@/lib", "./src/lib"]
         ],
         "extensions": [".ts", ".js", ".jsx", ".json"]
       }
