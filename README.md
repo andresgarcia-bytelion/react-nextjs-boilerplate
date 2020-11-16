@@ -14,6 +14,7 @@ Once you've downloaded this repo into your project folder, dive into your projec
 
 ```
 yarn install
+vercel
 vercel env pull
 npm run dev
 ```
@@ -50,6 +51,14 @@ Afterwards your project will begin running on `http://localhost:3000`.
 ## Prisma
 
 * [Docs](https://www.prisma.io/docs/)
+
+### Prisma Studio
+
+Prisma comes bundled with an IDE to edit the database. Just open up your terminal and enter the following:
+
+```
+npx prisma studio
+```
 
 ### Using PostgreSQL
 
