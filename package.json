@@ -30,7 +30,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "eslint-plugin-simple-import-sort": "^6.0.0",
     "isomorphic-unfetch": "^3.1.0",
     "moment": "^2.29.1",
     "next": "latest",
@@ -39,6 +39,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "swr": "^0.3.8",
     "uuid": "^8.3.1"
   },
   "husky": {

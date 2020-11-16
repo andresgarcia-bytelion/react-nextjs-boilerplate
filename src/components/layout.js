@@ -14,7 +14,7 @@ const pageGridStyles = makeStyles({
   root: {
     height: '100%',
     paddingTop: 57,
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       paddingTop: 63,
     },
   },
@@ -65,7 +65,7 @@ const Layout = ({ children, title }) => {
             </Paper>
           </Hidden>
         </Grid>
-        <Grid item>
+        <Grid item xs>
           <Container disableGutters maxWidth="xl">
             <Box className={mainBoxClasses.root}>
               {children}

@@ -5,6 +5,8 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '@/lib/theme';
 import AppContextProvider from '@/contexts/index';
+import fetcher from '@/data/fetcher';
+import { SWRConfig } from 'swr';
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
   whyDidYouRender(React);
@@ -32,7 +34,18 @@ const MyApp = (props) => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <AppContextProvider>
-          <Component {...pageProps} />
+          <SWRConfig
+            value={{
+              fetcher,
+              onError: (error) => {
+                if (error.status !== 403 && error.status !== 404) {
+                  // Debug errors globally
+                }
+              },
+            }}
+          >
+            <Component {...pageProps} />
+          </SWRConfig>
         </AppContextProvider>
       </ThemeProvider>
     </>

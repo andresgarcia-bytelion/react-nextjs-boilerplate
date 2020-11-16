@@ -26,6 +26,7 @@ Afterwards your project will begin running on `http://localhost:3000`.
 
 * `components`: All custom components to use within pages
 * `contexts`: [Context Providers](https://reactjs.org/docs/context.html) for passing data throughout the app
+* `data`: [SWR](https://swr.vercel.app/) functions for grabbing data from the api
 * `hooks`: Repeatedly used helper functions
 * `icons`: SVGs availabled through [next-svgr](https://www.npmjs.com/package/next-svgr)
 * `lib`: Vendor files
