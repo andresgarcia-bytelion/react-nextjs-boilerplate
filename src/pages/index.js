@@ -1,18 +1,22 @@
 import React from 'react';
-import { signIn, signOut, useSession } from 'next-auth/client';
-import Layout from 'components/layout';
+import Layout from '@/components/layout';
+import withAuth from '@/auth/with-auth';
+import useUsers from '@/data/users';
 
 const Home = () => {
-  const [session] = useSession();
+  const { users } = useUsers();
 
   return (
     <Layout title="Home">
-      <h2>Home</h2>
-      <p>{`User: ${JSON.stringify(session)}`}</p>
-      {!session && <button onClick={signIn} type="button">Sign in</button>}
-      {session && <button onClick={signOut} type="button">Sign out</button>}
+      <p style={{
+        wordBreak: 'break-all',
+      }}
+      >
+        { JSON.stringify(users) }
+      </p>
+      <p>Home</p>
     </Layout>
   );
 };
 
-export default Home;
+export default withAuth(Home);
