@@ -26,7 +26,7 @@ export default function withAuth(InnerComponent) {
         };
       }
 
-      const session = await auth0.getSession(ctx.req);
+      const session = await auth0.getSession(ctx.req, ctx.res);
       if (!session || !session.user) {
         if (!process.env.auth0BypassLogin) {
           ctx.res.writeHead(302, {
