@@ -30,7 +30,8 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
-    "react/forbid-prop-types": ["error", { "forbid": ["any"] }]
+    "react/forbid-prop-types": ["error", { "forbid": ["any"] }],
+    "security/detect-object-injection": "off"
 	},
   "settings": {
     "import/resolver": {

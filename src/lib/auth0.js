@@ -14,5 +14,5 @@ export default initAuth0({
   routes: {
     callback: '/api/callback',
     postLogoutRedirect: '/',
-  }
+  },
 });
