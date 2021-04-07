@@ -16,10 +16,10 @@ Once you've downloaded this repo into your project folder, dive into your projec
 yarn install
 vercel
 vercel env pull
-npm run dev
+yarn custom
 ```
 
-Afterwards your project will begin running on `http://localhost:3000`.
+Afterwards your project will begin running on `http://localhost:8080`.
 
 
 
