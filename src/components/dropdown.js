@@ -13,10 +13,7 @@ const menuStyles = makeStyles({
   },
 });
 
-const CustomMenu = ({
-  children,
-  ...rest
-}) => {
+const CustomMenu = ({ children, ...rest }) => {
   const menuClasses = menuStyles();
 
   return (

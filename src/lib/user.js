@@ -4,9 +4,7 @@
  * TO-DO: bring this file up to project code standards
  */
 /* eslint-disable react/prop-types */
-import React, {
-  useEffect, useState, createContext, useContext,
-} from 'react';
+import React, { useEffect, useState, createContext, useContext } from 'react';
 import fetch from 'isomorphic-unfetch';
 
 // Use a global to save the user so we don't have to fetch it again after page navigations
@@ -52,7 +50,7 @@ export const useFetchUser = () => {
 
     let isMounted = true;
 
-    fetchUser().then((user) => {
+    fetchUser().then(user => {
       // Only set the user if the component is still mounted
       if (isMounted) {
         if (user) {

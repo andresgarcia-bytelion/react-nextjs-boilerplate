@@ -12,7 +12,7 @@ if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
   whyDidYouRender(React);
 }
 
-const MyApp = (props) => {
+const MyApp = props => {
   const { Component, pageProps } = props;
 
   React.useEffect(() => {
@@ -37,7 +37,7 @@ const MyApp = (props) => {
           <SWRConfig
             value={{
               fetcher,
-              onError: (error) => {
+              onError: error => {
                 if (error.status !== 403 && error.status !== 404) {
                   // Debug errors globally
                 }

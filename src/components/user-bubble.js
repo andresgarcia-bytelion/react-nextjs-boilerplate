@@ -36,7 +36,7 @@ const UserBubble = () => {
   const { currentUser } = useAppContext();
   const [siteActionsAnchor, setSiteActionsAnchor] = useState(null);
 
-  const handleSiteActionsOpen = (event) => {
+  const handleSiteActionsOpen = event => {
     setSiteActionsAnchor(event.currentTarget);
   };
 
@@ -46,10 +46,7 @@ const UserBubble = () => {
 
   return (
     <>
-      <Button
-        className={buttonClasses.root}
-        onClick={handleSiteActionsOpen}
-      >
+      <Button className={buttonClasses.root} onClick={handleSiteActionsOpen}>
         <Box mr={1}>
           <Avatar
             alt=""

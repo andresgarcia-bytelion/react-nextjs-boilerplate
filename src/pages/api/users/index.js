@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-const handleGet = async (res) => {
+const handleGet = async res => {
   const user = await prisma.users.findMany();
 
   await prisma.$disconnect();

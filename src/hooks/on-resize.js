@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const OnResize = (callback) => {
+const OnResize = callback => {
   useEffect(() => {
     const handleResize = () => {
       callback();

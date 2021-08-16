@@ -1,38 +1,52 @@
 {
-	"env": {
-		"browser": true,
-		"commonjs": false,
-		"es6": true,
-		"node": true
-	},
-	"extends": [
-		"airbnb",
-		"eslint:recommended",
+  "env": {
+    "browser": true,
+    "commonjs": false,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
     "plugin:cypress/recommended",
-		"plugin:jsx-a11y/recommended",
+    "plugin:jsx-a11y/recommended",
     "plugin:security/recommended"
-	],
-	"plugins": [
+  ],
+  "plugins": [
     "cypress",
-		"jsx-a11y",
-		"no-secrets",
-		"react",
-		"react-hooks",
+    "jsx-a11y",
+    "no-secrets",
+    "react",
+    "react-hooks",
     "security",
     "simple-import-sort"
-	],
-	"rules": {
+  ],
+  "rules": {
+    "arrow-parens": ["error", "as-needed"],
     "consistent-return": 0,
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "objects": "only-multiline",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
+    "implicit-arrow-linebreak": "off",
     "import/extensions": "off",
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": "off",
     "max-len": "off",
+    "object-curly-newline": "off",
+    "operator-linebreak": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
     "react/forbid-prop-types": ["error", { "forbid": ["any"] }],
     "security/detect-object-injection": "off"
-	},
+  },
   "settings": {
     "import/resolver": {
       "alias": {

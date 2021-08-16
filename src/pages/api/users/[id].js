@@ -29,7 +29,8 @@ const handleDelete = async (userId, res) => {
 };
 
 const handlePut = async (userId, res, req) => {
-  const request = typeof req.body === 'object' ? req.body : JSON.parse(req.body);
+  const request =
+    typeof req.body === 'object' ? req.body : JSON.parse(req.body);
 
   if (typeof request.isPublished === 'string') {
     if (request.isPublished.toLowerCase() === 'true') {
