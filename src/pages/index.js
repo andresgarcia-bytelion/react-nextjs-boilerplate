@@ -8,11 +8,12 @@ const Home = () => {
 
   return (
     <Layout title="Home">
-      <p style={{
-        wordBreak: 'break-all',
-      }}
+      <p
+        style={{
+          wordBreak: 'break-all',
+        }}
       >
-        { JSON.stringify(users) }
+        {JSON.stringify(users)}
       </p>
       <p>Home</p>
     </Layout>

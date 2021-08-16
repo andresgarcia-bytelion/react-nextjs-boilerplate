@@ -7,11 +7,7 @@ import useUsers from '@/data/users';
 const TablePage = () => {
   const { users } = useUsers();
 
-  const headers = [
-    'Row One',
-    'Any Label',
-    'You Choose',
-  ];
+  const headers = ['Row One', 'Any Label', 'You Choose'];
   const data = [
     {
       rowOne: 'For Your Eyes Only',
@@ -32,11 +28,12 @@ const TablePage = () => {
 
   return (
     <Layout title="Table">
-      <p style={{
-        wordBreak: 'break-all',
-      }}
+      <p
+        style={{
+          wordBreak: 'break-all',
+        }}
       >
-        { JSON.stringify(users) }
+        {JSON.stringify(users)}
       </p>
       <p>Table</p>
       <Table

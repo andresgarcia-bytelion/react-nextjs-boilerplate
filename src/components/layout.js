@@ -57,19 +57,14 @@ const Layout = ({ children, title }) => {
       >
         <Grid item>
           <Hidden mdDown>
-            <Paper
-              className={asidePaperClasses.root}
-              elevation={0}
-            >
+            <Paper className={asidePaperClasses.root} elevation={0}>
               <Menu />
             </Paper>
           </Hidden>
         </Grid>
         <Grid item xs>
           <Container disableGutters maxWidth="xl">
-            <Box className={mainBoxClasses.root}>
-              {children}
-            </Box>
+            <Box className={mainBoxClasses.root}>{children}</Box>
           </Container>
         </Grid>
       </Grid>

@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 
-const useUser = (id) => {
+const useUser = id => {
   const { data, error } = useSWR(`/api/users/${id}`);
 
   return {

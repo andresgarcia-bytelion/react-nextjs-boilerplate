@@ -29,12 +29,8 @@ const CustomNav = ({ id, items }) => {
   const router = useRouter();
 
   return (
-    <List
-      aria-labelledby={id}
-      component="nav"
-      disablePadding
-    >
-      {items.map((item) => {
+    <List aria-labelledby={id} component="nav" disablePadding>
+      {items.map(item => {
         const active = router.pathname === item.href;
 
         return (

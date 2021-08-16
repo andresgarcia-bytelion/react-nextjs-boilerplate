@@ -12,7 +12,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
 
-const tableStyles = makeStyles((theme) => ({
+const tableStyles = makeStyles(theme => ({
   tableHeaderCell: {
     ...theme.typography.h6,
   },
@@ -22,7 +22,7 @@ const tableStyles = makeStyles((theme) => ({
   },
 }));
 
-const gridStyles = makeStyles((theme) => ({
+const gridStyles = makeStyles(theme => ({
   gridRow: {
     borderBottom: `1px solid ${theme.palette.grays.border}`,
   },
@@ -31,9 +31,7 @@ const gridStyles = makeStyles((theme) => ({
   },
 }));
 
-const TableBase = ({
-  data, headers, label, responsiveLayout,
-}) => {
+const TableBase = ({ data, headers, label, responsiveLayout }) => {
   const tableClasses = tableStyles();
   const gridClasses = gridStyles();
 
@@ -45,8 +43,10 @@ const TableBase = ({
             {headers && (
               <TableHead>
                 <TableRow>
-                  {headers.map((header) => (
-                    <TableCell className={tableClasses.tableHeaderCell}>{header}</TableCell>
+                  {headers.map(header => (
+                    <TableCell className={tableClasses.tableHeaderCell}>
+                      {header}
+                    </TableCell>
                   ))}
                 </TableRow>
               </TableHead>
@@ -54,7 +54,7 @@ const TableBase = ({
             <TableBody>
               {data.map((row, rowIndex) => (
                 <TableRow key={row}>
-                  {Object.keys(row).map((cell) => (
+                  {Object.keys(row).map(cell => (
                     <TableCell
                       className={clsx(tableClasses.tableRowCell, {
                         [tableClasses.tableRowCellOdd]: rowIndex % 2 === 0,
@@ -85,7 +85,9 @@ const TableBase = ({
                     <Box mb={2} pr={4}>
                       {headers && (
                         <Box>
-                          <Typography variant="h6">{headers[cellIndex]}</Typography>
+                          <Typography variant="h6">
+                            {headers[cellIndex]}
+                          </Typography>
                         </Box>
                       )}
                       <Typography>{row[cell]}</Typography>

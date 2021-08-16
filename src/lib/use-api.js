@@ -25,14 +25,14 @@ const useApi = (url, options = {}) => {
             initialState({
               error: await res.json(),
               isLoading: false,
-            }),
+            })
           );
         } else {
           setState(
             initialState({
               response: await res.json(),
               isLoading: false,
-            }),
+            })
           );
         }
       } catch (error) {
@@ -42,7 +42,7 @@ const useApi = (url, options = {}) => {
               error: error.message,
             },
             isLoading: false,
-          }),
+          })
         );
       }
     };

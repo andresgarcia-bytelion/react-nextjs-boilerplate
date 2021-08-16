@@ -29,10 +29,10 @@ const Ribbon = () => {
   const ribbonClasses = ribbonStyles();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const toggleDrawer = (state) => (event) => {
+  const toggleDrawer = state => event => {
     if (
-      event.type === 'keydown'
-      && (event.key === 'Tab' || event.key === 'Shift')
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
     ) {
       return;
     }
@@ -50,11 +50,7 @@ const Ribbon = () => {
       >
         <Logo />
         <Box>
-          <Grid
-            alignItems="center"
-            container
-            direction="row"
-          >
+          <Grid alignItems="center" container direction="row">
             <Hidden mdDown>
               <UserBubble />
             </Hidden>
@@ -65,18 +61,16 @@ const Ribbon = () => {
                 onClick={toggleDrawer(true)}
                 variant="outlined"
               >
-                <Typography component="span" variant="body2">Menu</Typography>
+                <Typography component="span" variant="body2">
+                  Menu
+                </Typography>
               </Button>
             </Hidden>
           </Grid>
         </Box>
       </Grid>
       <Hidden lgUp>
-        <Drawer
-          anchor="right"
-          onClose={toggleDrawer(false)}
-          open={drawerOpen}
-        >
+        <Drawer anchor="right" onClose={toggleDrawer(false)} open={drawerOpen}>
           <Menu />
         </Drawer>
       </Hidden>

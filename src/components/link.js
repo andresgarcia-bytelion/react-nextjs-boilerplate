@@ -23,11 +23,7 @@ const CustomLink = forwardRef(({ children, href }, ref) => {
   const linkClasses = linkStyles();
 
   return (
-    <Link
-      className={linkClasses.root}
-      href={href}
-      ref={ref}
-    >
+    <Link className={linkClasses.root} href={href} ref={ref}>
       {children}
     </Link>
   );
