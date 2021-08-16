@@ -1,0 +1,8 @@
+.circleci
+.github
+.next
+.vercel
+.vscode
+
+node_modules
+public
