@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "migrate": "prisma generate && prisma migrate save --experimental && prisma migrate up --experimental",
-    "lint": "eslint . --ext .js --fix"
+    "lint": "eslint . --ext .js --fix && prettier --write ."
   },
   "license": "Unlicensed",
   "dependencies": {
