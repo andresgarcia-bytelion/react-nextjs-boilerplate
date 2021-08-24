@@ -49,11 +49,8 @@ After changing the schema file...
 
 https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-migrate
 
-- Manually set the `DATABASE_URL` environment variable in your terminal
-- Run `npm run migrate` - this executes the following commands for you:
-  - `npx prisma generate` to generate the latest Prisma client
-  - `npx prisma migrate save --experimental` to create the migration files
-  - `npx prisma migrate up --experimental` to apply the migration to your database
+- Manually set the `DATABASE_URL` environment variable in your .env file
+- Run `npm run migrate`
 
 ## Auth0 Authentication
 
