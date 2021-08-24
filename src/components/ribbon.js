@@ -46,7 +46,7 @@ const Ribbon = () => {
         alignItems="center"
         container
         direction="row"
-        justify="space-between"
+        justifyContent="space-between"
       >
         <Logo />
         <Box>

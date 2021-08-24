@@ -22,7 +22,7 @@ const Menu = () => {
       className={menuClasses.root}
       container
       direction="column"
-      justify="space-between"
+      justifyContent="space-between"
       py={2}
     >
       <Nav

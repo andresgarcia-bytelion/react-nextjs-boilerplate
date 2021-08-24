@@ -3,10 +3,10 @@ import Head from 'next/head';
 import whyDidYouRender from '@welldone-software/why-did-you-render';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import { SWRConfig } from 'swr';
 import theme from '@/lib/theme';
 import AppContextProvider from '@/contexts/index';
 import fetcher from '@/data/fetcher';
-import { SWRConfig } from 'swr';
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
   whyDidYouRender(React);
