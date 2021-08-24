@@ -8,6 +8,7 @@
   "extends": [
     "airbnb",
     "eslint:recommended",
+    "plugin:@next/next/recommended",
     "plugin:cypress/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:security/recommended"
