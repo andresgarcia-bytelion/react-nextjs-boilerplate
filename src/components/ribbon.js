@@ -49,6 +49,7 @@ const Ribbon = () => {
         justifyContent="space-between"
       >
         <Logo />
+        <h3>My Blog</h3>
         <Box>
           <Grid alignItems="center" container direction="row">
             <Hidden mdDown>
