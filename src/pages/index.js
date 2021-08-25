@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import { Button } from '@material-ui/core';
 import Layout from '@/components/layout';
 import withAuth from '@/auth/with-auth';
 import usePosts from '@/data/posts';
@@ -20,12 +21,17 @@ const Home = () => {
           const readableDate = `${month}-${day}-${year}`;
           return (
             <div key={post.id}>
-              <h1>{`Post ${index + 1} - ${readableDate}`}</h1>
+              <h1 id={post.id}>{`Post ${index + 1} - ${readableDate}`}</h1>
               <h2>{post.title}</h2>
               <div>
                 {' '}
                 {ReactHtmlParser(post.text)}
                 {' '}
+              </div>
+              <div>
+                <Button variant="contained" color="primary">Edit</Button>
+                {'  '}
+                <Button variant="contained" color="secondary" onClick={() => { }}>Delete</Button>
               </div>
             </div>
           );
