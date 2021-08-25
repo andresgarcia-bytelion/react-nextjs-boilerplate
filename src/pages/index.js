@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactHtmlParser from 'react-html-parser';
-import { Button } from '@material-ui/core';
+import { Button, Modal } from '@material-ui/core';
 import Layout from '@/components/layout';
 import withAuth from '@/auth/with-auth';
 import usePosts from '@/data/posts';
 
 const Home = () => {
+  // const [open, setOpen] = useState(false);
+  // const handleOpen = setOpen(true);
+  // const handleClose = setOpen(false);
+
   let { posts } = usePosts();
   const URL = 'https://us-central1-mbtcandidate.cloudfunctions.net/posts/andresgarcia/';
 
@@ -44,11 +48,10 @@ const Home = () => {
                 {' '}
               </div>
               <div>
-                <Button variant="contained" color="primary">Edit</Button>
+                <Button variant="contained" color="primary" onClick={() => { }}>Edit</Button>
                 {'  '}
                 <Button variant="contained" color="secondary" onClick={async () => {
-                  let response = await deletePost(post.id);
-                  console.log(response);
+                  await deletePost(post.id);
                   location.reload();
                 }}>Delete</Button>
               </div>
