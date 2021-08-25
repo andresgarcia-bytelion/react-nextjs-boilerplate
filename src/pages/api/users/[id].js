@@ -1,10 +1,12 @@
 import { PrismaClient } from '@prisma/client';
 import auth0 from '@/lib/auth0';
 
-const { getSession, requireAuthentication } = auth0;
+const { getSession, withApiAuthRequired } = auth0;
+console.log(auth0);
 const prisma = new PrismaClient();
 
 const handleGet = async (userId, res) => {
+  console.log(userId);
   const user = await prisma.users.findOne({
     where: {
       id: Number(userId),
@@ -88,4 +90,4 @@ const handle = async (req, res) => {
   });
 };
 
-export default requireAuthentication(handle);
+export default withApiAuthRequired(handle);

@@ -16,7 +16,7 @@ const Home = () => {
       >
         {JSON.stringify(users)}
         {
-          users && users.length > 0 && users.map((user) =>
+          users && users.length > 0 && users.map(user =>
             <SimpleCard key={user.id} user={user} />)
         }
         {

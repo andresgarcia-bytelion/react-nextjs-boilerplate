@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 const SimpleCard = ({ user }) => {
   const { response } = useApi();
   const classes = useStyles();
-  const { nameFirst, nameLast } = user;
+  const { nameFirst, nameLast, id } = user;
   const randomLevel = random(1, 10);
   const router = useRouter();
 
@@ -50,7 +50,7 @@ const SimpleCard = ({ user }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={() => { router.push('/user'); }}>Learn More</Button>
+        <Button size="small" onClick={() => { router.push(`/user/${id}`); }}>Learn More</Button>
       </CardActions>
     </Card>
   );
