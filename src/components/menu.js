@@ -32,11 +32,14 @@ const Menu = () => {
         posts &&
         posts.response &&
         posts.response.map((post, index) => {
-          const currDate = new Date(post.timestamp);
-          const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(currDate);
-          const month = new Intl.DateTimeFormat('en', { month: 'short' }).format(currDate);
-          const day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(currDate);
-          const readableDate = `${month}-${day}-${year}`;
+          let readableDate = 'undefined';
+          if (post.timestamp) {
+            const currDate = new Date(post.timestamp);
+            const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(currDate);
+            const month = new Intl.DateTimeFormat('en', { month: 'short' }).format(currDate);
+            const day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(currDate);
+            readableDate = `${month}-${day}-${year}`;
+          }
           return (
             <Nav
               key={post.id}
